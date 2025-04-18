@@ -1,0 +1,93 @@
+.logo{
+    width: 24.86px;
+    height: 34.51px;
+}
+
+.widthHightSame {
+    --widthHightSame: 16px;
+    width: var(--widthHightSame);
+    height: var(--widthHightSame);
+    color: var(--bg-light);
+}
+
+.divider {
+    width: 1px;
+    height: 40px;
+    background-color: var(--bg-light-40);
+}
+
+.divider_i {
+    width: 100%;
+    height: 1px;
+    background-color: var(--bg-light-40);
+}
+
+.divider_ii {
+    width: 1px;
+    height: var(--header-hight);
+    background-color: var(--bg-light-40);
+}
+
+.main_header {
+
+    height: var(--header-hight);
+}
+
+.mainLogo {
+    width: 113px;
+}
+
+.list {
+    height: var(--header-hight);
+    color: var(--bg-light-60);
+    border-bottom: 3px solid transparent;
+}
+
+.list:hover {
+    height: var(--header-hight);
+    transition: 0.3s all ease-in-out;
+    color: var(--bg-light);
+    border-bottom: 3px solid var(--bg-sky-blue);
+}
+
+.ant-menu-item {
+    transition: background-color 0.3s;
+}
+
+:global(.ant-menu-dark .ant-menu-item:hover) {
+    background-color: var(--bg-green) !important;
+    /* Green hover */
+}
+
+:global(.ant-menu-item-selected) {
+    background-color: var(--bg-green) !important;
+    /* Green selected */
+    color: white !important;
+}
+
+@media (max-width: 1279px) {
+    :root {
+        --header-hight: 50px;
+    }
+
+    .divider {
+        height: 35px;
+    }
+}
+
+@media (max-width: 991px) {
+
+    :root {
+        --header-hight: 40px;
+        --widthHightSame: 12px;
+    }
+
+    .divider {
+        height: 30px;
+    }
+
+    .mainLogo {
+        width: 80px;
+    }
+
+}

@@ -1,0 +1,29 @@
+:root {
+    --text-primary: 'Netflix Sans';
+    --text-secondary: 'Cinzel Decorative';
+    --text-tertiary: 'Vujahday Script';
+
+    /* color */
+    --bg-sky-blue: #1FC0E1;
+    --bg-green: #87C65A;
+    --bg-dark-green: #024F25;
+    --bg-dark-teal: #004958;
+    --bg-light: #FFF;
+    --bg-light-40: #FFFFFF66;
+    --bg-light-60: #FFFFFF99;
+    --bg-light-80: #FFFFFFCC;
+    --bg-grey: #A1A1A1;
+    --bg-light-grey: #B3B3B3;
+    --bg-dark-grey: #747474;
+    --bg-black-01:#021A1F;
+    --bg-black-light: #131313;
+    --bg-black-40: #13131366;
+    --bg-dark-grey : #77959A;
+
+    /* CONTAINER */
+    --container-size: 1440px;
+
+    --header-hight : 68px;
+
+    --border-primary : 1px ;
+}

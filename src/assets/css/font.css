@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'Netflix Sans';
+    src: url('../font/NetflixSans-Medium.woff2') format('woff2'),
+        url('../font/NetflixSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Netflix Sans';
+    src: url('../font/NetflixSans-Bold.woff2') format('woff2'),
+        url('../font/NetflixSans-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Netflix Sans';
+    src: url('../font/NetflixSans-Light.woff2') format('woff2'),
+        url('../font/NetflixSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Netflix Sans';
+    src: url('../font/NetflixSans-Regular.woff2') format('woff2'),
+        url('../font/NetflixSans-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cinzel Decorative';
+    src: url('../font/CinzelDecorative-Black.woff2') format('woff2'),
+        url('../font/CinzelDecorative-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cinzel Decorative';
+    src: url('../font/CinzelDecorative-Bold.woff2') format('woff2'),
+        url('../font/CinzelDecorative-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cinzel Decorative';
+    src: url('../font/CinzelDecorative-Regular.woff2') format('woff2'),
+        url('../font/CinzelDecorative-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vujahday Script';
+    src: url('../font/VujahdayScript-Regular.woff2') format('woff2'),
+        url('../font/VujahdayScript-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}

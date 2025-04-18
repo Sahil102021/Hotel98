@@ -1,0 +1,47 @@
+.customButton {
+    font-family: var(--text-primary);
+    background-color: var(--bg-sky-blue);
+    font-size: 16px;
+    min-width: 149px;
+    min-height: 60px;
+    border: none;
+    border-radius: 0;
+    border: 1px solid var(--bg-sky-blue);
+    color: var(--bg-light);
+}
+
+.customButton:hover {
+    background-color: transparent;
+    border: 1px solid var(--bg-sky-blue);
+    color: var(--bg-sky-blue);
+}
+.simpleBorder{
+    border: 1px solid var(--bg-light);
+    background-color: transparent;
+    color: var(--bg-light);
+    border-radius: 0;
+    min-width: 120px;
+    min-height: 40px;
+}
+.simpleBorder:hover {
+    transition: 0.3s ease-in-out!important;
+    border: transparent;
+    background-color: var(--bg-sky-blue)!important;
+    color: var(--bg-light)!important;
+}
+
+@media (max-width:991px) {
+    .customButton {
+        min-width: 100px;
+        min-height: 40px;
+    }
+    .simpleBorder{
+        min-width: 100px;
+        min-height: 30px
+    }
+}
+@media (max-width:575px) {
+    .customButton {
+        padding: 0 5px !important;
+    }
+}

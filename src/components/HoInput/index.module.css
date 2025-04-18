@@ -1,0 +1,63 @@
+.customDate {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .dateInput {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+
+  }
+  .dateInput::placeholder {
+    color: var(--bg-light);
+  }
+  .dateInput:hover,
+  .dateInput:focus {
+    background-color: transparent !important;
+    border: none!important;
+    outline: none!important;
+    box-shadow: none;
+  }
+  
+  /* Hide default calendar icon */
+  .dateInput::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    position: absolute;
+    right: 10px;
+    z-index: 1;
+    cursor: pointer;
+  }
+  
+  .customDate::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: var(--bg-light);
+    position: absolute;
+    bottom: -70%;
+    left: 0;
+  }
+  
+  .icon {
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    color: var(--bg-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 10px;
+    pointer-events: none;
+  }
+  

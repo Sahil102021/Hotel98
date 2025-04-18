@@ -1,0 +1,201 @@
+html {
+    font-size: var(--font-size);
+    scroll-behavior: smooth;
+}
+
+.container {
+    padding: 0 12px;
+    width: 100%;
+    margin: auto;
+    max-width: var(--container-size);
+}
+a {
+    text-decoration: none !important;
+}
+/* baki */
+.padding_let {
+    padding-left: calc((100% - 740px) / 2);
+}
+.w-60 {
+    width: 60%;
+}
+.w-40 {
+    width: 40%;
+}
+.w-45 {
+    width: 45%;
+}
+.w-55 {
+    width: 55%;
+}
+h1 {
+    font-family: var(--text-secondary);
+    font-weight: 700;
+    font-size: 74px;
+}
+
+h2 {
+    font-family: var(--text-secondary);
+    font-weight: 700;
+    font-size: 50px;
+}
+
+h3 {
+    font-family: var(--text-secondary);
+    font-weight: 700;
+    font-size: 34px;
+}
+
+h4 {
+    font-family: var(--text-primar);
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.font-size-2xs {
+    font-size: 12px;
+}
+
+.font-size-xs {
+    font-size: 14px;
+}
+
+.font-size-sm {
+    font-size: 16px;
+}
+
+.font-size-md {
+    font-size: 18px;
+}
+
+.font-size-lg {
+    font-size: 20px;
+}
+
+.font-size-xl {
+    font-size: 24px;
+}
+
+.font-size-2xl {
+    font-size: 26px;
+}
+
+.font-size-3xl {
+    font-size: 28px;
+}
+
+.font-size-4xl {
+    font-size: 30px;
+}
+.font-size-5xl {
+    font-size: 32px;
+}
+
+.Vujahday {
+    font-family: var(--text-tertiary);
+    font-weight: 400;
+    font-size: 40px;
+    color: var(--bg-green);
+}
+
+.bg-sky-blue {
+    background-color: var(--bg-sky-blue);
+}
+
+.bg-green {
+    background-color: var(--bg-green);
+}
+
+.bg-dark-green {
+    background-color: var(--bg-dark-green);
+}
+.bg-dark-teal {
+    background-color: var(--bg-dark-teal) ;
+}
+.bg-light {
+    background-color: var(--bg-light);
+}
+
+.bg-light-40 {
+    background-color: var(--bg-light-40);
+}
+
+.bg-light-60 {
+    background-color: var(--bg-light-60);
+}
+
+.bg-light-80 {
+    background-color: var(--bg-light-80);
+}
+
+.bg-grey {
+    background-color: var(--bg-grey);
+}
+
+.bg-light-grey {
+    background-color: var(--bg-light-grey);
+}
+
+.bg-dark-grey {
+    background-color: var(--bg-dark-grey);
+}
+
+.bg-black-light {
+    background-color: var(--bg-black-light);
+}
+
+.bg-black-40 {
+    background-color: var(--bg-black-40);
+}
+
+.bg-black-01 {
+    background-color: var(--bg-black-01);
+}
+
+.text-sky-blue:hover {
+    transition: 0.3s all ease-in-out !important;
+    color: var(--bg-sky-blue) !important;
+}
+
+.text-grey {
+    color: var(--bg-light-60);
+}
+.text-black-40 {
+    color: var(--bg-black-40);
+}
+.text-dark-grey {
+    color: var(--bg-dark-grey);
+}
+.text-justify {
+    text-align: justify;
+}
+
+.h-1 {
+    height: 1px;
+}
+
+.w-1 {
+    width: 1px;
+}
+.py-6{
+    padding: 5rem 0 5rem 0;
+}
+.py-14 {
+    padding: 140px 0 140px 0;
+}
+
+.font-primary {
+    font-family: 'Netflix Sans';
+}
+
+.font-secondary {
+    font-family: 'Cinzel Decorative';
+}
+
+.font-tertiary {
+    font-family: 'Vujahday Script';
+}
+
+.font-green {
+    color: var(--bg-green);
+}
