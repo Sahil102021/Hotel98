@@ -1,47 +1,110 @@
-.customButton {
+ 
+/* General Button Reset */
+button {
     font-family: var(--text-primary);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+
+/* Primary Button Style */
+ .customButton {
     background-color: var(--bg-sky-blue);
-    font-size: 16px;
+    color: var(--bg-light);
     min-width: 149px;
     min-height: 60px;
-    border: none;
+    border: 1px solid var(--bg-sky-blue);
     border-radius: 0;
-    border: 1px solid var(--bg-sky-blue);
-    color: var(--bg-light);
+    padding: 0 16px;
 }
-
-.customButton:hover {
+ .customButton:hover {
     background-color: transparent;
-    border: 1px solid var(--bg-sky-blue);
     color: var(--bg-sky-blue);
-}
-.simpleBorder{
-    border: 1px solid var(--bg-light);
+} 
+
+/* Border-only Style */
+.simpleBorder {
     background-color: transparent;
     color: var(--bg-light);
-    border-radius: 0;
     min-width: 120px;
     min-height: 40px;
-}
-.simpleBorder:hover {
-    transition: 0.3s ease-in-out!important;
-    border: transparent;
-    background-color: var(--bg-sky-blue)!important;
-    color: var(--bg-light)!important;
+    border: 1px solid var(--bg-light);
+    border-radius: 0;
+    padding: 0 12px;
 }
 
-@media (max-width:991px) {
+.simpleBorder:hover {
+    background-color: var(--bg-sky-blue);
+    border: 1px solid transparent;
+    color: var(--bg-light);
+}
+
+/* Plan Button Style */
+.planButton {
+    width: 226px;
+    height: auto;
+    padding: 14px 20px;
+    border-radius: 0;
+    background-color: var(--bg-sky-blue);
+    color: var(--bg-light);
+    box-shadow: none;
+}
+
+:global(.ant-btn-variant-outlined) {
+    border-color: transparent;
+}
+
+
+@media (max-width: 1200px) {
+    .customButton {
+        min-width: 130px;
+        min-height: 50px;
+    }
+
+    .simpleBorder {
+        min-width: 110px;
+        min-height: 36px;
+    }
+
+    .planButton {
+        width: 200px;
+    }
+}
+
+@media (max-width: 991px) {
     .customButton {
         min-width: 100px;
         min-height: 40px;
     }
-    .simpleBorder{
+
+    .simpleBorder {
         min-width: 100px;
-        min-height: 30px
+        min-height: 32px;
+    }
+
+    .planButton {
+        width: 180px;
+        padding: 10px 16px;
     }
 }
-@media (max-width:575px) {
-    .customButton {
-        padding: 0 5px !important;
+
+@media (max-width: 767px) {
+
+    .customButton,
+    .simpleBorder,
+    .planButton {
+        width: 100%;
+        min-width: unset;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .customButton,
+    .simpleBorder,
+    .planButton {
+        padding: 10px;
     }
 }

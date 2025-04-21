@@ -12,9 +12,9 @@ html {
 a {
     text-decoration: none !important;
 }
-/* baki */
+
 .padding_let {
-    padding-left: calc((100% - 740px) / 2);
+    padding-left: calc((100% - 95%) / 2);
 }
 .w-60 {
     width: 60%;
@@ -198,4 +198,25 @@ h4 {
 
 .font-green {
     color: var(--bg-green);
+}
+.margin_smaller_t{
+    margin-top: var(--section-smaller-spacing);
+}
+.padding_smaller_t{
+    padding-top: var(--section-smaller-spacing);
+}
+.margin_smaller_y {
+    margin: var(--section-smaller-spacing) 0 var(--section-smaller-spacing) 0;
+}
+.padding_smaller_y {
+    padding: var(--section-smaller-spacing) 0 var(--section-smaller-spacing) 0;
+}
+.padding_smaller_b {
+    padding-bottom: var(--section-smaller-spacing) ;
+}
+.padding_small_i_y {
+    padding: var(--section-small-spacing_i) 0 var(--section-small-spacing_i) 0;
+}
+.padding_small_i_t {
+    padding-top: var(--section-small-spacing_i) ;
 }

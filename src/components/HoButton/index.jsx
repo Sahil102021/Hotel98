@@ -12,18 +12,23 @@ export const HoButton = ({
   handleClick,
 }) => {
   return (
-    <div>
+    
       <Button
         id={id}
         name={name}
         type={type}
         onClick={handleClick}
-        className={clsx(["z-0",{ [style.customButton]: variant === "normal",
-          [style.simpleBorder]:variant === "simpleBorder",
-         }])}
+        className={clsx([
+          "z-0",
+          {
+            [style.customButton]: variant === "normal",
+            [style.simpleBorder]: variant === "simpleBorder",
+            [`${style.planButton} font-size-lg text-uppercase `]: variant === "planButton",
+          },
+        ])}
       >
         {Children}
       </Button>
-    </div>
+    
   );
 };

@@ -21,11 +21,11 @@ export default function Slider({ slideData, slidesPerView, variant }) {
       {/* Custom Navigation Buttons (Only for testimonials) */}
       {isTestimonial && (
         <>
-          <button ref={prevRef} className={clsx([style.customPrev , "bg-transparent , border-0"])}>
-            {icon.left}
+          <button ref={prevRef} className={clsx([style.customPrev , "bg-transparent border border-1 rounded-circle "])}>
+            {svgicon.leftArrow}
           </button>
-          <button ref={nextRef}  className={clsx([style.customNext , "bg-transparent , border-0"])}>
-            {icon.right}
+          <button ref={nextRef}  className={clsx([style.customNext , "bg-transparent border border-1 rounded-circle"])}>
+            {svgicon.rightArrow}
           </button>
         </>
       )}
@@ -95,7 +95,7 @@ export default function Slider({ slideData, slidesPerView, variant }) {
             )}
 
             {isTestimonial && (
-              <div className="d-flex justify-content-center gap-2 gap-md-5 py-3xl-5">
+              <div className="d-flex justify-content-center gap-2 gap-md-5 padding_smaller_y ">
                 <div className={style.testimonialImg}>
                   <img
                     src={el.img}
@@ -119,11 +119,11 @@ export default function Slider({ slideData, slidesPerView, variant }) {
                   >
                     {el.detail}
                   </Typography>
-                  <div className="d-flex flex-column flex-sm-row gap-sm-3 align-sm-items-center">
-                    <Typography className="font-secondary font-size-4xl fw-bold">
+                  <div className="d-flex flex-column flex-sm-row gap-sm-3 align-items-sm-center">
+                    <Typography className={`font-secondary font-size-4xl fw-bold ${style.textLightSkyBlueHover}`}>
                       {el.name}
                     </Typography>
-                    <Typography className="fonat-primary font-size-md text-black-40 fw-normal">
+                    <Typography className={`fonat-primary font-size-lg text-black-40 fw-normal`}>
                       {el.day}
                     </Typography>
                   </div>

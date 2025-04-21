@@ -6,7 +6,7 @@ import { Outlet } from "react-router";
 const MainPageRoute = () => {
   return (
     <div>
-      {/* <Header /> */}
+      <Header />
       <Outlet />
       <Footer />
     </div>

@@ -1,110 +1,125 @@
 .border {
-    border: var(--border-primary) solid var(--bg-grey);
-    transition: 0.5s all ease-in-out;
-  }
-  
-  .border:hover {
-    border-color: var(--bg-sky-blue);
-  }
-  
-  .cardSize {
-    width: 510px;
-    height: 190px;
-    padding: 46px 0 0 30px;
-  }
-  
-  .max_w_450 {
-    max-width: 450px;
-  }
-  .line_clamp {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+  border: var(--border-primary) solid var(--bg-grey);
+  transition: 0.5s all ease-in-out;
+}
+
+.border:hover {
+  border-color: var(--bg-sky-blue);
+}
+
+.cardSize {
+  max-width: 510px;
+  width: 100%;
+  height: 190px;
+  padding: 46px 0 0 30px;
+}
+
+.max_w_450 {
+  max-width: 450px;
+}
+
+.line_clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.iconPostion {
+  background-color: var(--bg-black-01);
+  width: 68px;
+  height: 68px;
+  color: var(--bg-sky-blue);
+  position: absolute;
+  top: -15%;
+  left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+}
+
+/* ========= RESPONSIVE BREAKPOINTS ========= */
+
+/* ≤1599px */
+@media (max-width: 1599px) {
   .iconPostion {
-    background-color: var(--bg-black-01);
-    width: 68px;
-    height: 68px;
-    color: var(--bg-sky-blue);
-    position: absolute;
-    top: -15%;
+    top: -20%;
   }
-  
+
+  .cardSize {
+    width: 100%;
+    height: 180px;
+    padding: 36px 15px 0 30px;
+  }
+}
+
+/* ≤1439px */
+@media (max-width: 1439px) {
+  .cardSize {
+    width: 100%;
+    height: 160px;
+    padding: 26px 0 0 15px;
+  }
+}
+
+/* ≤1199px */
+@media (max-width: 1199px) {
   .icon {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
   }
-  
-  /* 1599px and below */
-  @media (max-width: 1599px) {
-    .iconPostion {
-      top: -20%;
-    }
-  
-    .cardSize {
-      width: 410px;
-      height: 180px;
-      padding: 36px 15px 0 30px;
-    }
+
+  .iconPostion {
+    width: 58px;
+    height: 58px;
   }
-  
-  /* 1439px and below */
-  @media (max-width: 1439px) {
-    .cardSize {
-      width: 350px;
-      height: 160px;
-      padding: 26px 0 0 15px;
-    }
+
+  .cardSize {
+    width: 100%;
+    height: 160px;
+    padding: 26px 15px 0 15px;
   }
-  
-  /* 1199px and below */
-  @media (max-width: 1199px) {
-    .icon {
-      width: 40px;
-      height: 40px;
-    }
-  
-    .iconPostion {
-      width: 58px;
-      height: 58px;
-    }
-  
-    .cardSize {
-      width: 300px;
-      height: 160px;
-      padding: 26px 15px 0 15px;
-    }
+}
+
+/* ≤991px */
+@media (max-width: 991px) {
+  .cardSize {
+    width: 100%;
+    height: 160px;
+    padding: 26px 15px 0 15px;
   }
-  
-  /* 991px and below */
-  @media (max-width: 991px) {
-    .cardSize {
-      width: 340px;
-      height: 160px;
-      padding: 26px 15px 0 15px;
-    }
+}
+
+/* ≤767px */
+@media (max-width: 767px) {
+  .cardSize {
+    width: 100%;
+    height: 140px;
+    padding: 26px 15px 0 15px;
   }
-  
-  /* 767px and below */
-  @media (max-width: 767px) {
-    .cardSize {
-      width: 100%;
-      height: 120px;
-      padding: 26px 15px 0 15px;
-    }
+}
+
+/* ≤575px */
+@media (max-width: 575px) {
+  .iconPostion {
+    width: 48px;
+    height: 48px;
   }
-  @media (max-width: 575px) {
-    .iconPostion {
-        width: 48px;
-        height: 48px;
-      }
-      .icon {
-        width: 30px;
-        height: 30px;
-      }
-      .cardSize {
-        height: 100px;
-      }
+
+  .icon {
+    width: 30px;
+    height: 30px;
   }
+
+  .cardSize {
+    height: 100px;
+    padding: 20px 12px 0 12px;
+  }
+}

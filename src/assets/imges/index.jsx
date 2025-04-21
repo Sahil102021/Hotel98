@@ -41,6 +41,7 @@ import testimonial1 from "./testimonial/Rectangle 57.png";
 import testimonial2 from "./testimonial/testimonial_1.png";
 import testimonial3 from "./testimonial/testimonial_5.png";
 import testimonial4 from "./testimonial/testimonial_7.png";
+import map from "./map/map.png";
 
 export {
     logo,
@@ -86,4 +87,5 @@ export {
     testimonial2,
     testimonial3,
     testimonial4,
+    map,
 }

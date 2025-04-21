@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Input } from "antd";
 import clsx from "clsx";
-import style from "./index.module.css";
+import style from "./hoinput.module.css";
 
 export const HoInput = ({
   type = "text",
