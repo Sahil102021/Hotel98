@@ -186,7 +186,7 @@ const Home = () => {
                     <div className="col-12 col-lg-11">
                       <div className="row g-4">
                         {QualityCardDetail.map((el, i) => (
-                          <div className="col-12 col-sm-6 pt-3 pt-xl-4" key={i}>
+                          <div className="col-12 col-sm-6 pt-sm-3 pt-xl-4" key={i}>
                             <AdsCard
                               icon={el.icon}
                               title={el.title}

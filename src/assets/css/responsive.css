@@ -181,7 +181,7 @@
     }
     :root {
         --section-small-spacing_i: 30px;
-        --section-smaller-spacing: 1rem;
+        --section-smaller-spacing: 3rem;
     }
     
 }

@@ -11,6 +11,7 @@ button {
 
 /* Primary Button Style */
  .customButton {
+    max-width: 150px;
     background-color: var(--bg-sky-blue);
     color: var(--bg-light);
     min-width: 149px;
@@ -97,6 +98,7 @@ button {
     .planButton {
         width: 100%;
         min-width: unset;
+        max-width: 130px;
     }
 }
 
