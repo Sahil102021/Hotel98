@@ -220,3 +220,6 @@ h4 {
 .padding_small_i_t {
     padding-top: var(--section-small-spacing_i) ;
 }
+.z-99 {
+    z-index: 99;
+}

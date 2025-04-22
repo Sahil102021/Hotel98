@@ -64,7 +64,14 @@
     /* Green selected */
     color: white !important;
 }
-
+.modal_backdrop {
+    backdrop-filter: blur(3px);
+    background-color: var(--bg-black-40);
+}
+.hideScrolling {
+    display: none;
+    transition: all 0.3s ease-in-out;
+}
 @media (max-width: 1279px) {
     :root {
         --header-hight: 50px;

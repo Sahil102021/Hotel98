@@ -10,51 +10,80 @@ button {
 }
 
 /* Primary Button Style */
- .customButton {
-    max-width: 150px;
-    background-color: var(--bg-sky-blue);
-    color: var(--bg-light);
+.customButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  
     min-width: 149px;
     min-height: 60px;
-    border: 1px solid var(--bg-sky-blue);
-    border-radius: 0;
+    max-width: 150px;
     padding: 0 16px;
-}
- .customButton:hover {
-    background-color: transparent;
-    color: var(--bg-sky-blue);
-} 
+  
+    color: var(--bg-light);
+    background-color: var(--bg-sky-blue);
+    border-radius: 0;
+  
+    background-image: linear-gradient(30deg, var(--bg-sky-blue) 50%, transparent 50%);
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    transition: background-position 300ms ease-in-out, color 300ms ease-in-out;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .customButton:hover {
+    background-position: 100% !important;
+    background-color: transparent !important;
+    color: var(--bg-green) !important;
+    border-color: var(--bg-green) !important;
+  } 
+  
 
 /* Border-only Style */
-.simpleBorder {
+.simpleBorder {  
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  
     background-color: transparent;
     color: var(--bg-light);
     min-width: 120px;
     min-height: 40px;
-    border: 1px solid var(--bg-light);
-    border-radius: 0;
     padding: 0 12px;
-}
-
-.simpleBorder:hover {
-    background-color: var(--bg-sky-blue);
-    border: 1px solid transparent;
-    color: var(--bg-light);
-}
-
+  
+    border: 1px solid var(--bg-light) !important;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+  }
+  
+  .simpleBorder:hover {
+    background-color: var(--bg-sky-blue) !important;
+    border-color: transparent !important;
+    color: var(--bg-light) !important;
+  }
 /* Plan Button Style */
 .planButton {
     width: 226px;
     height: auto;
     padding: 14px 20px;
     border-radius: 0;
-    background-color: var(--bg-sky-blue);
+    background-color: var(--bg-sky-blue) !important;
     color: var(--bg-light);
     box-shadow: none;
+}
+.planButton:hover {
+    background-color: var(--bg-green) !important;
+    border:var(--bg-green) ;
+    color: var(--bg-light) !important;
 }
 
 :global(.ant-btn-variant-outlined) {
     border-color: transparent;
+    background-color: transparent;
 }
 
 

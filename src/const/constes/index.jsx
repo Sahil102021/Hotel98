@@ -1,4 +1,20 @@
-import { room1, room2, room3, room4, testimonial1, testimonial2, testimonial3, testimonial4 } from "../../assets/imges";
+import {
+  hero1,
+  hero2,
+  hero3,
+  hero4,
+  hero5,
+  hero6,
+  hero9,
+  room1,
+  room2,
+  room3,
+  room4,
+  testimonial1,
+  testimonial2,
+  testimonial3,
+  testimonial4,
+} from "../../assets/imges";
 import { svgicon } from "../svgicon";
 
 export const manuList = [
@@ -78,27 +94,44 @@ export const QualityCardDetail = [
 
 export const testimonialsData = [
   {
-    detail: "The hotel environment is very good, the rooms are clean and tidy, and the parking is convenient. Fully equipped, worth recommending, cost-effective.",
+    detail:
+      "The hotel environment is very good, the rooms are clean and tidy, and the parking is convenient. Fully equipped, worth recommending, cost-effective.",
     name: "Sam Deliman, NY",
     day: "3 days ago",
     img: testimonial1,
   },
   {
-    detail: "Amazing service and very friendly staff. The location is perfect for sightseeing. Highly recommended for families!",
+    detail:
+      "Amazing service and very friendly staff. The location is perfect for sightseeing. Highly recommended for families!",
     name: "Linda Parker, CA",
     day: "1 week ago",
     img: testimonial2,
   },
   {
-    detail: "Clean rooms, comfy beds, and delicious breakfast. I was very satisfied with the overall experience.",
+    detail:
+      "Clean rooms, comfy beds, and delicious breakfast. I was very satisfied with the overall experience.",
     name: "Ravi Kumar, TX",
     day: "2 weeks ago",
     img: testimonial3,
   },
   {
-    detail: "Great value for the price. The amenities exceeded my expectations. I would definitely come back again.",
+    detail:
+      "Great value for the price. The amenities exceeded my expectations. I would definitely come back again.",
     name: "Emily Zhang, WA",
     day: "5 days ago",
     img: testimonial4,
   },
+];
+
+export const heroSectionImg = [
+  {
+    img: hero9,
+  },
+  {
+    img: hero9,
+  },
+  {
+    img: hero9,
+  },
+
 ];

@@ -15,6 +15,7 @@ import clsx from "clsx";
 import { Button, Typography } from "antd";
 import { useNavigate } from "react-router";
 import {
+  heroSectionImg,
   QualityCardDetail,
   roomHomePageData,
   svgicon,
@@ -23,13 +24,35 @@ import {
 import { AdsCard } from "../../components/AdsCard";
 import style from "./home.module.css";
 import { HoInput } from "../../components/HoInput";
+import ScrollDownBadge from "../../components/ScrollDownBadge";
+import HalfRoundTitle from "../../components/HalfRoundTitle";
 
 const Home = () => {
   const navigate = useNavigate();
   return (
     <div>
       {/* hero */}
-      <section className="mt-5 pt-5 ">
+      <section>
+        <div className="w-100 ">
+          <div className={`${style.max_w_1920} mx-auto`}>
+            <div className={` ${style.heroSlieder}  position-relative`}>
+              <div className="slider z-1">
+                <Slider
+                  variant={"HeroVerticalScroll"}
+                  slideData={heroSectionImg}
+                />
+              </div>
+              <div
+                className={`${style.halfround} position-absolute z-3`} >
+                <HalfRoundTitle />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* form */}
+      <section className="w-100">
         <div className="w-100 bg-dark-teal">
           <div className={clsx([style.max_w_1920, "mx-auto"])}>
             <div className={`${style.form_i} padding_let`}>
@@ -181,20 +204,21 @@ const Home = () => {
                 </h2>
               </div>
               <div className="w-75">
-  
-                  <div className="row justify-content-end">
-                    <div className="col-12 col-lg-11">
-                      <div className="row g-4">
-                        {QualityCardDetail.map((el, i) => (
-                          <div className="col-12 col-sm-6 pt-sm-3 pt-xl-4" key={i}>
-                            <AdsCard
-                              icon={el.icon}
-                              title={el.title}
-                              detail={el.detail}
-                            />
-                          </div>
-                        ))}
-                      
+                <div className="row justify-content-end">
+                  <div className="col-12 col-lg-11">
+                    <div className="row g-4">
+                      {QualityCardDetail.map((el, i) => (
+                        <div
+                          className="col-12 col-sm-6 pt-sm-3 pt-xl-4"
+                          key={i}
+                        >
+                          <AdsCard
+                            icon={el.icon}
+                            title={el.title}
+                            detail={el.detail}
+                          />
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>

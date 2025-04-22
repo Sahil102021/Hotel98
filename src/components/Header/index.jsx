@@ -1,4 +1,4 @@
-import React from "react";
+import React,{ useEffect, useState } from "react";
 import { icon, svgicon } from "../../const";
 import style from "./header.module.css";
 import clsx from "clsx";
@@ -7,13 +7,35 @@ import { NavLink } from "react-router";
 import { manuList } from "../../const/constes";
 import { HoButton } from "../HoButton";
 import { logo } from "../../assets/imges";
+import { Link, animateScroll as scroll } from 'react-scroll';
 import SideBar from "./sideBar";
+
 const Header = () => {
+  const [scrolling, setScrolling] = useState(false);
+  const [hideScrolling , sethideScrolling] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleScroll = () => {
+    if (window.scrollY > 20) {
+      setScrolling(true);
+    } else {
+      setScrolling(false);
+    }
+    if(window.scrollY > 60){
+      sethideScrolling(true)
+    }else {
+      sethideScrolling(false);
+    }
+  }
   return (
     <div>
       {/* header */}
-      <header className="w-100 position-fixed top-0 z-3">
-        <div className="w-ful bg-black ">
+      <header className="w-100 position-fixed top-0 z-99">
+        <div className={`w-ful ${style.modal_backdrop }  ${hideScrolling ? style.hideScrolling : '' } `}>
           <div className="container">
             <div className="w-full d-flex justify-content-center justify-content-sm-end align-items-center flex-wrap">
               <NavLink to="mailto:Hotel98@gmail.con">
@@ -43,7 +65,7 @@ const Header = () => {
           </div>
           <div className={clsx(style.divider_i)}></div>
         </div>
-        <div className="w-full bg-black">
+        <div className={`w-full ${scrolling ? 'bg-black' : style.modal_backdrop}`}>
           <div className="container">
             <div
               className={clsx([

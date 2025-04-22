@@ -1,0 +1,38 @@
+.border {
+    width: 715px;
+    height: 676px;
+    border-radius: 500px 500px 0 0;
+    border: 1px solid var(--bg-light, #fff);
+    position: relative;
+}
+.innerBackground {
+    max-width: 680px;
+    height: 100%;
+    max-height: 676px;
+    border-radius: 500px 500px 0 0;
+    backdrop-filter: blur(3px);
+    background-color: var(--bg-teal-transparent, rgba(0, 128, 128, 0.2));
+    transition: max-width 0.3s ease-in-out;
+}
+.border:hover .innerBackground {
+    max-width: 715px;
+}
+  
+h1 {
+    z-index: 1;
+    position: relative;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 104px;
+}
+.miniStar {
+    color: var(--bg-green);
+    width: 13px;
+    height: 13px;
+}
+.title {
+    padding-top: 110px;
+}

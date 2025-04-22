@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import clsx from "clsx";
@@ -12,19 +12,32 @@ import { icon, svgicon } from "../../const";
 export default function Slider({ slideData, slidesPerView, variant }) {
   const isHomeRoom = variant === "homeRoomPage";
   const isTestimonial = variant === "testimonials";
+  const HeroVerticalScroll = variant === "HeroVerticalScroll";
 
+  const swiperDirection = HeroVerticalScroll ? "vertical" : "horizontal";
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
   return (
     <div className="position-relative">
-      {/* Custom Navigation Buttons (Only for testimonials) */}
       {isTestimonial && (
         <>
-          <button ref={prevRef} className={clsx([style.customPrev , "bg-transparent border border-1 rounded-circle "])}>
+          <button
+            ref={prevRef}
+            className={clsx(
+              style.customPrev,
+              "bg-transparent border border-1 rounded-circle"
+            )}
+          >
             {svgicon.leftArrow}
           </button>
-          <button ref={nextRef}  className={clsx([style.customNext , "bg-transparent border border-1 rounded-circle"])}>
+          <button
+            ref={nextRef}
+            className={clsx(
+              style.customNext,
+              "bg-transparent border border-1 rounded-circle"
+            )}
+          >
             {svgicon.rightArrow}
           </button>
         </>
@@ -32,9 +45,12 @@ export default function Slider({ slideData, slidesPerView, variant }) {
 
       <Swiper
         modules={[Pagination, Navigation]}
+        direction={swiperDirection}
+        pagination={{
+          clickable: true,
+        }}
         loop={true}
         className="mySwiper"
-        // pagination={ isTestimonial ? { clickable: true } : false }
         navigation={
           isTestimonial
             ? {
@@ -71,7 +87,7 @@ export default function Slider({ slideData, slidesPerView, variant }) {
         {slideData?.map((el, i) => (
           <SwiperSlide key={i}>
             {isHomeRoom && (
-              <div className="w-100 d-flex flex-column justify-content-center gap-4">
+              <div className="">
                 <div className={style.slidImgHomePage}>
                   <img
                     src={el.img}
@@ -82,12 +98,12 @@ export default function Slider({ slideData, slidesPerView, variant }) {
                   />
                 </div>
                 <div
-                  className={clsx([
+                  className={clsx(
                     style.border_color,
-                    "border border-1 border-end-0 border-start-0 py-3",
-                  ])}
+                    "border border-1 border-end-0 border-start-0 py-3 mt-4"
+                  )}
                 >
-                  <Typography className="font-primary font-size-2xl text-uppercase text-white text-center">
+                  <Typography className="font-primary fs-4 text-uppercase text-white text-center ">
                     {el.title}
                   </Typography>
                 </div>
@@ -95,13 +111,13 @@ export default function Slider({ slideData, slidesPerView, variant }) {
             )}
 
             {isTestimonial && (
-              <div className="d-flex justify-content-center gap-2 gap-md-5 padding_smaller_y ">
+              <div className="d-flex justify-content-center gap-2 gap-md-5 py-4">
                 <div className={style.testimonialImg}>
                   <img
                     src={el.img}
                     width="100%"
                     className="object-fit-cover"
-                    alt=""
+                    alt="testimonial"
                   />
                 </div>
                 <div>
@@ -109,24 +125,40 @@ export default function Slider({ slideData, slidesPerView, variant }) {
                     {svgicon.doubleQuotes}
                   </div>
                 </div>
-                <div className="detail d-flex justify-content-between flex-column">
+                <div className="detail d-flex flex-column justify-content-between">
                   <Typography
-                    className={clsx([
+                    className={clsx(
                       style.max_w_849,
                       style.line_clap,
-                      "fonat-primary font-size-4xl fw-normal",
-                    ])}
+                      "font-primary fs-4 fw-normal"
+                    )}
                   >
                     {el.detail}
                   </Typography>
-                  <div className="d-flex flex-column flex-sm-row gap-sm-3 align-items-sm-center">
-                    <Typography className={`font-secondary font-size-4xl fw-bold ${style.textLightSkyBlueHover}`}>
+                  <div className="d-flex flex-column flex-sm-row gap-sm-3 align-items-sm-center mt-3">
+                    <Typography
+                      className={`font-secondary fs-5 fw-bold ${style.textLightSkyBlueHover}`}
+                    >
                       {el.name}
                     </Typography>
-                    <Typography className={`fonat-primary font-size-lg text-black-40 fw-normal`}>
+                    <Typography className="font-primary fs-6 text-muted fw-normal">
                       {el.day}
                     </Typography>
                   </div>
+                </div>
+              </div>
+            )}
+
+            {HeroVerticalScroll && (
+              <div className="z-1">
+                <div className={`${style.heroImg} w-100 z-1`}>
+                  <img
+                    src={el.img}
+                    width="100%"
+                    height="100%"
+                    className="object-fit-cover"
+                    alt="vertical scroll"
+                  />
                 </div>
               </div>
             )}
