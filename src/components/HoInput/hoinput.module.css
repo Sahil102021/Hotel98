@@ -7,10 +7,9 @@
   position: relative;
   cursor: pointer;
   padding: 0;
-  border-bottom: 1px solid var(--bg-light);
+  border-bottom: 1px solid var(--bg-light-20);
   box-sizing: border-box;
 }
-
 .dateInput {
   flex: 1;
   padding: 0;
@@ -20,14 +19,10 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   width: 100%;
-  font-size: 16px;
-  color: inherit;
 }
-
 .dateInput::placeholder {
   color: var(--bg-light);
 }
-
 .dateInput:hover,
 .dateInput:focus {
   background-color: transparent !important;
@@ -35,8 +30,6 @@
   outline: none !important;
   box-shadow: none !important;
 }
-
-/* Hide default calendar icon */
 .dateInput::-webkit-calendar-picker-indicator {
   opacity: 0;
   position: absolute;
@@ -45,16 +38,15 @@
   cursor: pointer;
 }
 
-/* Optional custom bottom border (if needed) */
-.customDate::after {
+/* .customDate::after {
   content: '';
   width: 100%;
   height: 1px;
-  background-color: var(--bg-light);
+  background-color: border; 
   position: absolute;
   bottom: 0;
   left: 0;
-}
+} */
 
 .icon {
   position: absolute;
@@ -77,7 +69,8 @@
 
 @media (max-width: 1365px) {
   .customDate {
-    max-width: 180px;
+    max-width: 100%;
+    height: 36px;
   }
 }
 

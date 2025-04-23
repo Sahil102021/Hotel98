@@ -1,78 +1,33 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import style from "./scrollDownBadge.module.css";
+import { Typography } from "antd";
+import { roundedCircle, roundedText } from "../../assets/imges";
+import { svgicon } from "../../const";
+import { NavLink } from "react-router";
 
 const ScrollDownBadge = () => {
   return (
     <div className="">
-      <svg
-        width="150"
-        height="150"
-        viewBox="0 0 102 101"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <foreignObject
-          x="-19.2726"
-          y="-19.5219"
-          width="140.545"
-          height="140.049"
-        >
-          <div
-            xmlns="http://www.w3.org/1999/xhtml"
-            className="d-flex justify-content-center align-items-center"
-            style={{
-              backdropFilter: "blur(10px)",
-              clipPath: "url(#bgblur_0_52_101_clip_path)",
-              height: "100%",
-              width: "100%",
-            }}
-          >
-            
+      <NavLink to="/aboutHome">
+        <div className="d-flex justify-content-center align-items-center">
+          <div className={`${style.img} position-relative`}>
+            {/* <img src={roundedCircle} width="100%" height="100%" alt="" /> */}
+            {svgicon.scrollBadge}
+
+            <div
+              className={`${style.img_i} ${style.roundeTextImg} position-absolute`}
+            >
+              <img src={roundedText} width="100%" height="100%" alt="" />
+            </div>
+
+            <div
+              className={`${style.downArrowIcon} position-absoulate text-light`}
+            >
+              {svgicon.downArrow}
+            </div>
           </div>
-        </foreignObject>
-
-        {/* Outer glowing ring with clipPath */}
-        <path
-          d="M48.1388 2.00491C49.8006 0.635873 52.1994 0.635872 53.8612 2.00491L58.0806 5.48084C59.4647 6.62102 61.3177 7.01489 63.0458 6.53623L68.3142 5.07698C70.3892 4.50224 72.5806 5.47792 73.542 7.40452L75.9828 12.2961C76.7834 13.9007 78.316 15.0142 80.0895 15.2798L85.4959 16.0896C87.6253 16.4085 89.2304 18.1911 89.325 20.3422L89.5652 25.8037C89.644 27.5952 90.5912 29.2357 92.1033 30.1997L96.7129 33.1385C98.5285 34.2959 99.2698 36.5773 98.4813 38.5809L96.4793 43.6679C95.8227 45.3365 96.0207 47.2206 97.0099 48.7162L100.026 53.2758C101.214 55.0717 100.963 57.4573 99.4276 58.9669L95.5297 62.7999C94.2511 64.0572 93.6657 65.8589 93.9611 67.6276L94.8616 73.0196C95.2163 75.1434 94.0169 77.2208 92.0004 77.9755L86.8804 79.8916C85.201 80.5201 83.9334 81.9279 83.4838 83.6639L82.1134 88.9561C81.5736 91.0405 79.633 92.4504 77.4838 92.3197L72.0271 91.9877C70.2372 91.8788 68.5066 92.6493 67.3899 94.0523L63.9854 98.3296C62.6445 100.014 60.2981 100.513 58.3879 99.5193L53.5381 96.9966C51.9472 96.1691 50.0528 96.1691 48.4619 96.9966L43.6121 99.5193C41.7019 100.513 39.3555 100.014 38.0146 98.3296L34.6101 94.0523C33.4934 92.6493 31.7628 91.8788 29.9729 91.9877L24.5162 92.3197C22.367 92.4504 20.4264 91.0405 19.8866 88.9561L18.5162 83.6639C18.0666 81.9279 16.799 80.5201 15.1196 79.8916L9.99963 77.9755C7.98308 77.2208 6.78369 75.1434 7.13838 73.0196L8.03893 67.6276C8.33433 65.8589 7.74894 64.0572 6.47033 62.7999L2.57239 58.9669C1.03714 57.4573 0.786402 55.0717 1.97422 53.2758L4.99007 48.7162C5.97933 47.2206 6.17735 45.3365 5.52067 43.6679L3.51872 38.5809C2.73024 36.5773 3.4715 34.2959 5.28707 33.1385L9.89674 30.1997C11.4088 29.2357 12.356 27.5952 12.4348 25.8037L12.675 20.3422C12.7696 18.1911 14.3747 16.4085 16.5041 16.0896L21.9105 15.2798C23.684 15.0142 25.2166 13.9007 26.0172 12.2961L28.458 7.40453C29.4194 5.47792 31.6108 4.50224 33.6858 5.07698L38.9542 6.53623C40.6823 7.01489 42.5353 6.62103 43.9194 5.48084L48.1388 2.00491Z"
-          fill="url(#paint0_linear_52_101)"
-          fillOpacity="0.23"
-          stroke="url(#paint1_linear_52_101)"
-        />
-
-        {/* Clip and gradient defs */}
-        <defs>
-          <clipPath
-            id="bgblur_0_52_101_clip_path"
-            transform="translate(19.2726 19.5219)"
-          >
-            <path d="M48.1388 2.00491C49.8006..." />
-          </clipPath>
-          <linearGradient
-            id="paint0_linear_52_101"
-            x1="51"
-            y1="-1"
-            x2="73"
-            y2="184"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stopColor="white" />
-            <stop offset="1" stopColor="white" stopOpacity="0" />
-          </linearGradient>
-          <linearGradient
-            id="paint1_linear_52_101"
-            x1="48"
-            y1="-92"
-            x2="51"
-            y2="103"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stopColor="white" />
-            <stop offset="1" stopColor="white" stopOpacity="0" />
-          </linearGradient>
-        </defs>
-      </svg>
-      {/* Inner SVG for circular text */}
-      
+        </div>
+      </NavLink>
     </div>
   );
 };

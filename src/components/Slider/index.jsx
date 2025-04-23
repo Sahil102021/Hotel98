@@ -111,7 +111,7 @@ export default function Slider({ slideData, slidesPerView, variant }) {
             )}
 
             {isTestimonial && (
-              <div className="d-flex justify-content-center gap-2 gap-md-5 py-4">
+              <div className="d-flex justify-content-center gap-2 gap-md-5 padding_smaller_y">
                 <div className={style.testimonialImg}>
                   <img
                     src={el.img}
@@ -130,7 +130,7 @@ export default function Slider({ slideData, slidesPerView, variant }) {
                     className={clsx(
                       style.max_w_849,
                       style.line_clap,
-                      "font-primary fs-4 fw-normal"
+                      "font-primary fw-normal font-size-4xl "
                     )}
                   >
                     {el.detail}

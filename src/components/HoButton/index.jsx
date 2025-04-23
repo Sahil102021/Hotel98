@@ -24,6 +24,7 @@ export const HoButton = ({
             [style.customButton]: variant === "normal",
             [style.simpleBorder]: variant === "simpleBorder",
             [`${style.planButton} font-size-lg text-uppercase `]: variant === "planButton",
+            [`${style.bigPlanButton} font-size-lg text-uppercase `]: variant === "bigPlanButton",
           },
         ])}
       >

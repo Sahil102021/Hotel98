@@ -2,22 +2,18 @@
   border: var(--border-primary) solid var(--bg-grey);
   transition: 0.5s all ease-in-out;
 }
-
 .border:hover {
   border-color: var(--bg-sky-blue);
 }
-
 .cardSize {
   max-width: 510px;
   width: 100%;
   height: 190px;
   padding: 46px 0 0 30px;
 }
-
 .max_w_450 {
   max-width: 450px;
 }
-
 .line_clamp {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -25,11 +21,11 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 .iconPostion {
+  --iconPostion : 68px;
   background-color: var(--bg-black-01);
-  width: 68px;
-  height: 68px;
+  width: var(--iconPostion);
+  height: var(--iconPostion);
   color: var(--bg-sky-blue);
   position: absolute;
   top: -15%;
@@ -39,15 +35,11 @@
   align-items: center;
   border-radius: 50%;
 }
-
 .icon {
-  width: 50px;
-  height: 50px;
+  --icon : 50px;
+  width: var(--icon);
+  height: var(--icon);
 }
-
-/* ========= RESPONSIVE BREAKPOINTS ========= */
-
-/* ≤1599px */
 @media (max-width: 1599px) {
   .iconPostion {
     top: -20%;
@@ -60,7 +52,6 @@
   }
 }
 
-/* ≤1439px */
 @media (max-width: 1439px) {
   .cardSize {
     width: 100%;
@@ -68,56 +59,30 @@
     padding: 26px 0 0 15px;
   }
 }
-
-/* ≤1199px */
 @media (max-width: 1199px) {
-  .icon {
-    width: 40px;
-    height: 40px;
-  }
-
-  .iconPostion {
-    width: 58px;
-    height: 58px;
-  }
-
+  :root {
+    --iconPostion : 58px;
+    --icon : 40px;
+}
   .cardSize {
     width: 100%;
     height: 160px;
     padding: 26px 15px 0 15px;
   }
 }
-
-/* ≤991px */
 @media (max-width: 991px) {
-  .cardSize {
-    width: 100%;
-    height: 160px;
-    padding: 26px 15px 0 15px;
-  }
-}
 
-/* ≤767px */
+}
 @media (max-width: 767px) {
   .cardSize {
-    width: 100%;
     height: 140px;
-    padding: 26px 15px 0 15px;
   }
 }
-
-/* ≤575px */
 @media (max-width: 575px) {
-  .iconPostion {
-    width: 48px;
-    height: 48px;
+  :root {
+    --iconPostion : 48x;
+    --icon : 30px;
   }
-
-  .icon {
-    width: 30px;
-    height: 30px;
-  }
-
   .cardSize {
     height: 100px;
     padding: 20px 12px 0 12px;

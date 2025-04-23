@@ -32,7 +32,7 @@ const Home = () => {
   return (
     <div>
       {/* hero */}
-      <section>
+      <section part="/" id="/">
         <div className="w-100 ">
           <div className={`${style.max_w_1920} mx-auto`}>
             <div className={` ${style.heroSlieder}  position-relative`}>
@@ -42,8 +42,7 @@ const Home = () => {
                   slideData={heroSectionImg}
                 />
               </div>
-              <div
-                className={`${style.halfround} position-absolute z-3`} >
+              <div className={`${style.halfround} position-absolute z-3`}>
                 <HalfRoundTitle />
               </div>
             </div>
@@ -56,34 +55,42 @@ const Home = () => {
         <div className="w-100 bg-dark-teal">
           <div className={clsx([style.max_w_1920, "mx-auto"])}>
             <div className={`${style.form_i} padding_let`}>
-              <form action="" className="d-flex flex-row h-100">
-                <div className={`${style.form_ii}`}>
+              <form action="" className="d-flex flex-column flex-md-row align-items-center h-100 py-2 pe-3 pe-md-0 py-md-0">
+                <div className={`${style.form_ii} w-100  row `}>
+                  <div className="col-6 col-xl-3 py-2 ">
                   <HoInput
                     type={"text"}
                     variant={"date"}
                     placeholder={"Check-in"}
                     calendarIcon={svgicon.calender}
                   />
+                  </div>
+                  <div className="col-6 col-xl-3 py-2 ">
                   <HoInput
                     type={"text"}
                     variant={"date"}
                     placeholder={"Check-in"}
                     calendarIcon={svgicon.calender}
                   />
+                  </div>
+                  <div className="col-6 col-xl-3 py-2 ">
                   <HoInput
                     type={"text"}
                     variant={"date"}
                     placeholder={"Check-in"}
                     calendarIcon={svgicon.calender}
                   />
+                  </div>
+                  <div className="col-6 col-xl-3 py-2 ">
                   <HoInput
                     type={"text"}
                     variant={"date"}
                     placeholder={"Check-in"}
                     calendarIcon={svgicon.calender}
                   />
+                  </div>
                 </div>
-                <HoButton variant="planButton" Children="book now" />
+                <HoButton variant="bigPlanButton" Children="book now" />
               </form>
             </div>
           </div>
@@ -91,7 +98,7 @@ const Home = () => {
       </section>
 
       {/* aboutus */}
-      <section className="padding_small_i_y">
+      <section className="padding_small_i_y" id="">
         <div className="w-100 ">
           <div className="container">
             <div className="w-100 d-flex flex-column flex-md-row align-items-center border border-3 border-start-0 border-end-0">
@@ -244,7 +251,7 @@ const Home = () => {
                 <div
                   className={clsx(
                     style.galleryMainImg,
-                    "w-100 h-100 d-flex justify-content-center align-items-center"
+                    "w-100 d-flex justify-content-center align-items-center"
                   )}
                 >
                   <img
@@ -261,7 +268,7 @@ const Home = () => {
                   {[gallery19, gallery20, gallery21, gallery22].map(
                     (img, i) => (
                       <div className="col-6" key={i}>
-                        <div className={clsx(style.gallertImg, "w-100 h-100")}>
+                        <div className={clsx(style.gallertImg, "w-100 ")}>
                           <img
                             src={img}
                             className="img-fluid object-fit-cover w-100 h-100"

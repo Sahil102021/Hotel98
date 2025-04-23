@@ -90,6 +90,9 @@ h4 {
 .font-size-5xl {
     font-size: 32px;
 }
+.font-size-6xl {
+    font-size: 74px;
+}
 
 .Vujahday {
     font-family: var(--text-tertiary);
@@ -156,7 +159,9 @@ h4 {
     transition: 0.3s all ease-in-out !important;
     color: var(--bg-sky-blue) !important;
 }
-
+.text-light-80 {
+    color: var(--bg-light-80);
+}
 .text-grey {
     color: var(--bg-light-60);
 }
@@ -222,4 +227,10 @@ h4 {
 }
 .z-99 {
     z-index: 99;
+}
+.object-contain {
+    object-fit: contain;
+}
+.object-cover {
+    object-fit: cover;
 }

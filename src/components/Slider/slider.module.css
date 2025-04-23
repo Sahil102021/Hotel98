@@ -1,149 +1,140 @@
 .slidImgHomePage {
-    width: auto;
-    height: 440px;
+  width: auto;
+  height: 440px;
+}
+.border_color {
+  border-color: var(--bg-light-40) !important;
+}
+.max_w_849 {
+  max-width: 849px;
+}
+.testimonialImg {
+  max-width: 184px;
+  max-height: 241px;
+  overflow: hidden;
+}
+.doubleQuotes {
+  width: 30px;
+  color: var(--bg-green);
+}
+.customPrev,
+.customNext {
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  z-index: 10;
+  cursor: pointer;
+  border-color: var(--bg-black) !important;
+  transition: 0.3s all ease-in-out;
+}
+.customPrev:hover,
+.customNext:hover,
+.customPrev:hover svg,
+.customNext:hover svg {
+  background-color: var(--bg-sky-blue) !important;
+  color: var(--bg-light) !important;
+  border-color: var(--bg-sky-blue) !important;
+  transition: 0.3s all ease-in-out;
+}
+.customPrev {
+  left: 10px;
+}
+.customNext {
+  right: 10px;
+}
+.customPrev svg,
+.customNext svg {
+  width: 22px;
+  height: auto;
+  color: var(--bg-black);
+}
+.line_clap {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.textLightSkyBlueHover:hover,
+.textLightSkyBlueHover:focus {
+  color: var(--bg-sky-blue) !important;
+  transition: 0.2s all ease-in-out;
+}
+.heroImg {
+  height: var(--swiper-height-vertical);
+  overflow: hidden;
+}
+:global(.swiper-vertical) {
+  width: 100%;
+  height: var(--swiper-height-vertical);
+}
+
+@media (max-width: 1599px) {
+  .slidImgHomePage {
+    width: 100%;
+    height: 340px;
   }
-  
-  .border_color {
-    border-color: var(--bg-light-40) !important;
-  }
-  
-  .max_w_849 {
-    max-width: 849px;
-  }
-  
   .testimonialImg {
-    max-width: 184px;
-    max-height: 241px;
-    overflow: hidden;
+    max-width: 120px;
+    max-height: 160px;
   }
-  
-  .doubleQuotes {
-    width: 30px;
-    color: var(--bg-green);
+  .max_w_849 {
+    max-width: 500px;
   }
-  
-  .customPrev,
-  .customNext {
-    width: 44px;
-    height: 44px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: transparent;
-    border: none;
-    z-index: 10;
-    cursor: pointer;
-    border-color: var(--bg-black) !important;
-    transition: 0.3s all ease-in-out;
-  }
-  
-  .customPrev:hover,
-  .customNext:hover,
-  .customPrev:hover svg,
-  .customNext:hover svg {
-    background-color: var(--bg-sky-blue) !important;
-    color: var(--bg-light) !important;
-    border-color: var(--bg-sky-blue) !important;
-    transition: 0.3s all ease-in-out;
-  }
-  
-  .customPrev {
-    left: 10px;
-  }
-  
-  .customNext {
-    right: 10px;
-  }
-  
   .customPrev svg,
   .customNext svg {
-    width: 22px;
-    height: auto;
-    color: var(--bg-black);
+    width: 30px;
+    height: 30px;
   }
-  
-  .line_clap {
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  .doubleQuotes {
+    width: 20px;
   }
-  
-  .textLightSkyBlueHover:hover  ,.textLightSkyBlueHover:focus  {
-    color: var(--bg-sky-blue) !important;
-    transition: 0.2s all ease-in-out;
+}
+@media (max-width: 1365px) {
+
+}
+@media (max-width: 991px) {
+  .testimonialImg {
+    max-width: 100px;
+    max-height: 140px;
   }
 
-  .heroImg {
-    height: 881px;
-    overflow: hidden;
+  .max_w_849 {
+    max-width: 360px;
   }
-  :global(.swiper-vertical) 
-  {
-    width: 100%;
-    height: 881px;
+}
+@media (max-width: 767px) {
+  .customPrev svg,
+.customNext svg {
+  width: 18px;
+}
+  .customPrev {
+    top: 10%;
+    left: 82.5%;
+    width: 33px;
+    height: 33px;
   }
-  /* ========================= RESPONSIVE ========================= */
-  
-  @media (max-width: 1599px) {
-    .slidImgHomePage {
-      width: 100%;
-      height: 340px;
-    }
-  
-    .testimonialImg {
-      max-width: 120px;
-      max-height: 160px;
-    }
-  
-    .max_w_849 {
-      max-width: 500px;
-    }
-  
-    .customPrev svg,
-    .customNext svg {
-      width: 30px;
-      height: 30px;
-    }
-  
-    .doubleQuotes {
-      width: 20px;
-    }
+  .customNext {
+    top: 10% !important;
+    right: 5%;
+    width: 33px;
+    height: 33px;
   }
-  
-  @media (max-width: 991px) {
-    .testimonialImg {
-      max-width: 100px;
-      max-height: 140px;
-    }
-  
-    .max_w_849 {
-      max-width: 360px;
-    }
+}
+@media (max-width: 575px) {
+  .max_w_849 {
+    max-width: 260px;
   }
-  
-  @media (max-width: 575px) {
-    .max_w_849 {
-      max-width: 260px;
-    }
-  
-    .customPrev svg,
-    .customNext svg {
-      display: none;
-    }
-    /* baki */
-    .customPrev{
-        top: 10%;
-        left: 70%;
-        width: 33px;
-        height: 33px;
-    }
-    .customNext{
-        top: 10% !important;
-        right: 10%;
-        width: 33px;
-        height: 33px;
-    }
+  .customPrev {
+    top: 10%;
+    left: 70%;
   }
-  
+  .customNext {
+    top: 10% !important;
+    right: 10%;
+  }
+}

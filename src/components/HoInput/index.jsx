@@ -28,7 +28,7 @@ export const HoInput = ({
         onClick={handleClick}
         style={{ appearance: "none" }}
         className={clsx("text-white text-uppercase ", style.input , {
-          [style.dateInput]: variant === "date",
+          [`${style.dateInput} font-size-md font-primary text-light-80 fw-normal `]: variant === "date",
         })}
         
       />

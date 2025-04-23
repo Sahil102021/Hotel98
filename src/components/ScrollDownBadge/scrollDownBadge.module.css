@@ -1,12 +1,36 @@
-.downArrow {
-    height: 24px;
-    color: var(--bg-black);
-    background-color: var(--bg-black);
+.img {
+    width: 104px;
+    height: 104px;
 }
-.textCurve {
-    font-family: 'Arial', sans-serif;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-  
+.roundedCircle {
+    z-index: 999;
+}
+.roundeTextImg {
+    top: 9%;
+    left: 11.5%;
+    font-size: 10px;
+    font-family: var(--text-secondary);
+    font-weight: 500;
+}
+
+.downArrowIcon {
+    position: absolute;
+    width: 15px;
+    top: 32%;
+    left: 42.5%;
+    animation: move 1s infinite;
+}
+.img_i {
+    width: 80px;
+    height: 80px;
+}
+
+@keyframes move {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+}

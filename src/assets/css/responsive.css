@@ -1,10 +1,5 @@
 /* CONTAINERS START */
 @media (min-width: 576px) {
-    :root {
-        /* --container-size: 540px; */
-        --gap-i : 32px;
-    }
-    
 }
 
 @media (min-width: 768px) {
@@ -20,7 +15,7 @@
 @media (min-width: 992px) {
     :root {
         --container-size: 960px;
-        --gap-i : 42px;
+        --gap-i: 42px;
     }
 
     .padding_let {
@@ -41,7 +36,7 @@
 @media (min-width: 1280px) {
     :root {
         --container-size: 1180px;
-        --gap-i : 52px;
+        --gap-i: 52px;
     }
 
     .padding_let {
@@ -62,7 +57,7 @@
 @media (min-width: 1400px) {
     :root {
         --container-size: 1340px;
-        --gap-i : 62px
+        --gap-i: 62px
     }
 
     .padding_let {
@@ -83,7 +78,7 @@
 @media (min-width: 1680px) {
     :root {
         --container-size: 1600px;
-        --gap-i : 72px
+        --gap-i: 72px
     }
 
     .padding_let {
@@ -99,7 +94,11 @@
     :root {
         --section-small-spacing_i: 100px;
         --section-smaller-spacing: 5rem;
+        --line-hight: 92px;
+        --section-small-spacing_ii: 62px;
+        --swiper-height-vertical: 761px;
     }
+
     .font-size-2xl {
         font-size: 18px;
     }
@@ -110,6 +109,10 @@
 
     .font-size-4xl {
         font-size: 18px;
+    }
+
+    h1 {
+        font-size: 62px;
     }
 
     .p-5 {
@@ -125,13 +128,29 @@
     :root {
         --section-small-spacing_i: 80px;
         --section-smaller-spacing: 4rem;
+        --line-hight: 72px;
+        --swiper-height-vertical: 698px;
     }
+
+    h1 {
+        font-size: 52px;
+    }
+
 }
 
 @media (max-width: 1279px) {
     :root {
+        --section-small-spacing_ii:42px;
         --section-small-spacing_i: 60px;
         --section-smaller-spacing: 3rem;
+        --swiper-height-vertical: 650px;
+        --line-hight: 62px;
+    }
+    h1 {
+        font-size: 42px;
+    }
+    .font-size-3xl {
+        font-size: 20px;
     }
 }
 
@@ -141,33 +160,40 @@
     .font-size-xl {
         font-size: 16px;
     }
+    h1 {
+        font-size: 42px;
+    }
 }
 
 @media (max-width: 991px) {
     :root {
         --header-hight: 40px;
         --section-small-spacing_i: 40px;
+        --section-small-spacing_ii:32px;
         --section-smaller-spacing: 2rem;
+        --swiper-height-vertical: 600px;
+        --line-hight: 42px;
     }
-
     .w-75,
     .w-50,
     .w-25 {
         width: 100% !important;
     }
-
     .font-size-sm {
         font-size: 12px;
     }
-
     .font-size-4xl {
         font-size: 16px;
     }
-
+    .font-size-3xl {
+        font-size: 18px;
+    }
     .Vujahday {
         font-size: 24px;
     }
-
+    h1 {
+        font-size: 32px;
+    }
     h2 {
         font-size: 20px;
     }
@@ -181,14 +207,29 @@
     }
     :root {
         --section-small-spacing_i: 30px;
+        --section-small-spacing_ii:22px;
         --section-smaller-spacing: 3rem;
+        --swiper-height-vertical: 600px;
+        --line-hight: 32px;
     }
-    
+    h1 {
+        font-size: 24px;
+    }
+    .font-size-3xl {
+        font-size: 16px;
+    }
 }
 
 @media (min-width: 576px) {}
 
 @media (max-width: 575px) {
+    :root {
+        --swiper-height-vertical: 500px;
+        --gap-i: 18px;
+    }
+    .font-size-lg {
+        font-size: 14px;
+    }
     .font-size-xl {
         font-size: 14px;
     }

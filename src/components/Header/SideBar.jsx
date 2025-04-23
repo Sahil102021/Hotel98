@@ -6,10 +6,19 @@ import { icon } from "../../const/icon";
 
 const SideBar = () => {
   const [open, setOpen] = useState(false);
-  const location = useLocation(); // to detect current route
+  const location = useLocation();
 
   const showDrawer = () => setOpen(true);
   const closeDrawer = () => setOpen(false);
+
+  const menuItems = manuList.map((item) => ({
+    key: item.link,
+    label: (
+      <NavLink to={item.link} className="text-white" onClick={closeDrawer}>
+        {item.name}
+      </NavLink>
+    ),
+  }));
 
   return (
     <>
@@ -22,7 +31,7 @@ const SideBar = () => {
 
       <Drawer
         placement="right"
-        onClose={closeDrawer}
+        onClick={closeDrawer}
         open={open}
         className="bg-black text-white"
         closeIcon={null} // hide default close icon
@@ -49,15 +58,8 @@ const SideBar = () => {
           selectedKeys={[location.pathname]}
           className="bg-black"
           theme="dark"
-        >
-          {manuList.map((item, index) => (
-            <Menu.Item key={item.link}>
-              <NavLink to={item.link} className="text-white">
-                {item.name}
-              </NavLink>
-            </Menu.Item>
-          ))}
-        </Menu>
+          items={menuItems}
+        />
       </Drawer>
     </>
   );

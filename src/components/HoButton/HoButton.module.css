@@ -34,7 +34,7 @@ button {
     cursor: pointer;
   }
   
-  .customButton:hover {
+  .customButton:hover  {
     background-position: 100% !important;
     background-color: transparent !important;
     color: var(--bg-green) !important;
@@ -61,8 +61,8 @@ button {
   }
   
   .simpleBorder:hover {
-    background-color: var(--bg-sky-blue) !important;
-    border-color: transparent !important;
+    background-color: var(--bg-green) !important ;
+    border-color: transparent !important ;
     color: var(--bg-light) !important;
   }
 /* Plan Button Style */
@@ -71,19 +71,33 @@ button {
     height: auto;
     padding: 14px 20px;
     border-radius: 0;
-    background-color: var(--bg-sky-blue) !important;
+    background-color: var(--bg-sky-blue) ;
     color: var(--bg-light);
     box-shadow: none;
 }
 .planButton:hover {
-    background-color: var(--bg-green) !important;
+    background-color: var(--bg-green);
     border:var(--bg-green) ;
-    color: var(--bg-light) !important;
+    color: var(--bg-light) ;
 }
 
 :global(.ant-btn-variant-outlined) {
     border-color: transparent;
     background-color: transparent;
+}
+.bigPlanButton {
+    width: 226px;
+    height: 100% ;
+    padding: 14px 20px;
+    border-radius: 0;
+    background-color: var(--bg-sky-blue) ;
+    color: var(--bg-light);
+    box-shadow: none;
+}
+.bigPlanButton:hover {
+    background-color: var(--bg-green) !important;
+    border:var(--bg-green) !important;
+    color: var(--bg-light) !important ;
 }
 
 
@@ -113,7 +127,6 @@ button {
         min-width: 100px;
         min-height: 32px;
     }
-
     .planButton {
         width: 180px;
         padding: 10px 16px;
@@ -127,7 +140,12 @@ button {
     .planButton {
         width: 100%;
         min-width: unset;
-        max-width: 130px;
+        max-width: 110px;
+    }
+    .bigPlanButton {
+        width: 100%;
+        min-width: 28px;
+        padding: 5px 0 5px 0;
     }
 }
 

@@ -73,19 +73,19 @@ const Header = () => {
                 " w-full d-flex justify-content-between align-items-center  ",
               ])}
             >
+              <NavLink to="/">
               <div
                 className={clsx(style.mainLogo, [
                   " d-flex flex-row justify-content-between  align-items-center",
                 ])}
               >
                 <div className={clsx(style.divider_ii)}></div>
-                <NavLink to={"/"}>
                   <div className={clsx(style.logo)}>
                     <img src={logo} width='100%' height='100%' alt="logo" />
                   </div>
-                </NavLink>
                 <div className={clsx(style.divider_ii)}></div>
               </div>
+                </NavLink>
               <ul className="h-full d-none d-xl-flex gap-xl-5 flex-row mb-0">
                 {manuList.map((el, i) => {
                   return (

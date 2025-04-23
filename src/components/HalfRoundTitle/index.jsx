@@ -18,7 +18,7 @@ const HalfRoundTitle = () => {
                 Welcome to Hotel98 
                 </Typography>
             <h1
-              className={`${style.SpaceUpper} text-center font-secondary fw-bold text-white pt-4`  }>
+              className={`${style.SpaceUpper} text-center font-secondary fw-bold text-white pt-2 pt-xxl-4`}>
               Enjoy a Luxury Experience
             </h1>
             <ScrollDownBadge />

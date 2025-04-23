@@ -1,4 +1,4 @@
-.logo{
+.logo {
     width: 24.86px;
     height: 34.51px;
 }
@@ -29,8 +29,7 @@
 }
 
 .main_header {
-
-    height: var(--header-hight);
+    min-height: var(--header-hight);
 }
 
 .mainLogo {
@@ -38,13 +37,13 @@
 }
 
 .list {
-    height: var(--header-hight);
+    min-height: var(--header-hight);
     color: var(--bg-light-60);
     border-bottom: 3px solid transparent;
 }
 
-.list:hover {
-    height: var(--header-hight);
+.list:hover , .list:focus , .list:active  {
+    min-height: var(--header-hight);
     transition: 0.3s all ease-in-out;
     color: var(--bg-light);
     border-bottom: 3px solid var(--bg-sky-blue);
@@ -55,23 +54,24 @@
 }
 
 :global(.ant-menu-dark .ant-menu-item:hover) {
-    background-color: var(--bg-green) !important;
-    /* Green hover */
+    background-color: var(--bg-green) ;
 }
 
 :global(.ant-menu-item-selected) {
-    background-color: var(--bg-green) !important;
-    /* Green selected */
-    color: white !important;
+    background-color: var(--bg-green) ;
+    color: white ;
 }
+
 .modal_backdrop {
     backdrop-filter: blur(3px);
     background-color: var(--bg-black-40);
 }
+
 .hideScrolling {
     display: none;
-    transition: all 0.3s ease-in-out;
+    transition: all 1s ease-in-out;
 }
+
 @media (max-width: 1279px) {
     :root {
         --header-hight: 50px;

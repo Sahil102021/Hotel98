@@ -1,4 +1,5 @@
 :root {
+    /* text */
     --text-primary: 'Netflix Sans';
     --text-secondary: 'Cinzel Decorative';
     --text-tertiary: 'Vujahday Script';
@@ -10,6 +11,7 @@
     --bg-dark-teal: #004958;
     --bg-teal-transparent:#003f4c5b;
     --bg-light: #FFF;
+    --bg-light-20: #ffffff2c;
     --bg-light-40: #FFFFFF66;
     --bg-light-60: #FFFFFF99;
     --bg-light-80: #FFFFFFCC;
@@ -24,29 +26,22 @@
     --bg-light-sky-blue :#1FC0E129;
     --caribbean-blue-color: 31, 192, 225;
 
-    /* CONTAINER */
 
+    /* height */
     --header-hight : 68px;
-    /* --section-extra-big-spacing: 14rem;
-    --section-extra-big-spacing: 14rem;
-    --section-big-spacing: 13.2rem;
-    --section-mid-spacing: 12rem; */
+    --line-hight : 104px;
+    --swiper-height-vertical : 881px;
+
+    /* spacing */
     --section-small-spacing: 7rem;
     --section-small-spacing_i: 140px;
+    --section-small-spacing_ii:110px;
     --section-smaller-spacing: 5rem;
-    /* --header-less-spacing: 70px;
-    --header-inner-height: 68px;
-    --top-header-height: 40px; */
+
+    /* container */
     --container-size: 1600px;
-    /* --book-now-form-btn-width: 26.6rem;
-    --about-us-content-width: 66.5rem;
-    --feedback-img-width: 18.5rem;
-    --welcome-right-content-width: 53.4rem;
-    --experience-img-width: 33rem;
-    --our-story-img-width: 70rem;
-    --our-story-tab-width: 54.6rem; */
+
 
     --border-primary : 1px ;
-
-    --gap-i : 72px
+    --gap-i : 72px;
 }

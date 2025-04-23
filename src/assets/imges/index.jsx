@@ -42,6 +42,8 @@ import testimonial2 from "./testimonial/testimonial_1.png";
 import testimonial3 from "./testimonial/testimonial_5.png";
 import testimonial4 from "./testimonial/testimonial_7.png";
 import map from "./map/map.png";
+import roundedCircle from "./RoundIcon/Star 15.png";
+import roundedText from "./icon/scroll-down-text.svg";
 
 export {
     logo,
@@ -88,4 +90,6 @@ export {
     testimonial3,
     testimonial4,
     map,
+    roundedCircle,
+    roundedText,
 }
