@@ -1,5 +1,5 @@
 import React from "react";
-import { HoButton } from "../../components";
+import { HoButton, HoIcon } from "../../components";
 import Slider from "../../components/Slider";
 import {
   bestHotel,
@@ -16,8 +16,10 @@ import { Button, Typography } from "antd";
 import { useNavigate } from "react-router";
 import {
   heroSectionImg,
+  options,
   QualityCardDetail,
   roomHomePageData,
+  socialMediaLink,
   svgicon,
   testimonialsData,
 } from "../../const";
@@ -26,6 +28,8 @@ import style from "./home.module.css";
 import { HoInput } from "../../components/HoInput";
 import ScrollDownBadge from "../../components/ScrollDownBadge";
 import HalfRoundTitle from "../../components/HalfRoundTitle";
+import Dropdown from "../../components/Dropdown";
+import HoAutoComplete from "../../components/HoAutoComplete";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -33,17 +37,26 @@ const Home = () => {
     <div>
       {/* hero */}
       <section part="/" id="/">
-        <div className="w-100 ">
+        <div className={`w-100  `}>
           <div className={`${style.max_w_1920} mx-auto`}>
-            <div className={` ${style.heroSlieder}  position-relative`}>
-              <div className="slider z-1">
+            <div className={` ${style.heroSlieder} position-relative`}>
+              <div className={`slider`}>
                 <Slider
                   variant={"HeroVerticalScroll"}
                   slideData={heroSectionImg}
                 />
               </div>
-              <div className={`${style.halfround} position-absolute z-3`}>
+              <div className={`${style.halfround} position-absolute z-99`}>
                 <HalfRoundTitle />
+              </div>
+              <div className={`${style.heroLeftSideIcon} position-absolute z-3`}>
+                <div className={` ${style.heroLeftSideIconList} d-flex flex-column justify-content-center align-items-center gap-3 gap-xxl-4`}>
+                  {socialMediaLink.map((el ,i ) => {
+                    return (
+                      <HoIcon key={i} variant={"smallCrircleIcon"} icon={el.icon} to={el.link} />
+                    )
+                  })}
+                </div>
               </div>
             </div>
           </div>
@@ -55,39 +68,37 @@ const Home = () => {
         <div className="w-100 bg-dark-teal">
           <div className={clsx([style.max_w_1920, "mx-auto"])}>
             <div className={`${style.form_i} padding_let`}>
-              <form action="" className="d-flex flex-column flex-md-row align-items-center h-100 py-2 pe-3 pe-md-0 py-md-0">
+              <form
+                action=""
+                className="d-flex flex-column flex-md-row align-items-center h-100 py-2 pe-3 pe-md-0 py-md-0"
+              >
                 <div className={`${style.form_ii} w-100  row `}>
                   <div className="col-6 col-xl-3 py-2 ">
-                  <HoInput
-                    type={"text"}
-                    variant={"date"}
-                    placeholder={"Check-in"}
-                    calendarIcon={svgicon.calender}
-                  />
+                    <HoInput
+                      type={"date"}
+                      name={"date"}
+                      variant={"date"}
+                      placeholder={"Check-in"}
+                      calendarIcon={svgicon.calender}
+                    />
                   </div>
                   <div className="col-6 col-xl-3 py-2 ">
-                  <HoInput
-                    type={"text"}
-                    variant={"date"}
-                    placeholder={"Check-in"}
-                    calendarIcon={svgicon.calender}
-                  />
+                    <HoInput
+                      type={"date"}
+                      variant={"date"}
+                      name={"date"}
+                      placeholder={"Check-in"}
+                      calendarIcon={svgicon.calender}
+                    />
                   </div>
                   <div className="col-6 col-xl-3 py-2 ">
-                  <HoInput
-                    type={"text"}
-                    variant={"date"}
-                    placeholder={"Check-in"}
-                    calendarIcon={svgicon.calender}
-                  />
+                    <HoAutoComplete
+                      variant={"primaryAutoComplete"}
+                      options={options}
+                    />
                   </div>
                   <div className="col-6 col-xl-3 py-2 ">
-                  <HoInput
-                    type={"text"}
-                    variant={"date"}
-                    placeholder={"Check-in"}
-                    calendarIcon={svgicon.calender}
-                  />
+                    <Dropdown Variant={"DropdownPrimary"} Children="guest" />
                   </div>
                 </div>
                 <HoButton variant="bigPlanButton" Children="book now" />

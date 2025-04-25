@@ -6,6 +6,8 @@ import { NavLink } from "react-router";
 import { map } from "../../assets/imges";
 import { svgicon } from "../../const";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+import { HoIcon } from "../HoIcon";
+
 const Footer = () => {
   const containerStyle = {
     width: "100%",
@@ -33,17 +35,26 @@ const Footer = () => {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Google Map Location"
-                className={`${style.mapIframe} ${ !mapAccess ? style.noPointer : "" }`}
+                className={`${style.mapIframe} ${
+                  !mapAccess ? style.noPointer : ""
+                }`}
               />
-              {mapAccess ? ( "" ) : (
-                <div className={`${style.mapIcon} position-absolute d-flex justify-content-center align-items-center`} >
+              {mapAccess ? (
+                ""
+              ) : (
+                <div
+                  className={`${style.mapIcon} position-absolute d-flex justify-content-center align-items-center`}
+                >
                   {!mapAccess && (
                     <div
                       className={`${style.pulsating_circle} z-1`}
                       onClick={allowMapAccess}
-                      style={{ cursor: "pointer" }} />
+                      style={{ cursor: "pointer" }}
+                    />
                   )}
-                  <div className={`${style.iconLocation} position-absolute z-5`} >
+                  <div
+                    className={`${style.iconLocation} position-absolute z-5`}
+                  >
                     {svgicon.location2}
                   </div>
                 </div>
@@ -63,16 +74,11 @@ const Footer = () => {
                 {/* Address */}
                 <div className="w-100 w-md-50  mb-md-0">
                   <div className="d-flex align-items-center gap-2 flex-row">
-                    <div className={style.iconCircle}>
-                      <div
-                        className={clsx(
-                          style.icon,
-                          "d-flex justify-content-center align-items-center"
-                        )}
-                      >
-                        {svgicon.location}
-                      </div>
-                    </div>
+                    <HoIcon
+                      variant={"bigCrircleIcon"}
+                      icon={svgicon.location}
+                    />
+
                     <Typography
                       className={clsx(
                         style.line_clap,
@@ -90,16 +96,8 @@ const Footer = () => {
                   {/* Phone */}
                   <div className="w-100 w-sm-50">
                     <div className="d-flex align-items-center gap-2 flex-row">
-                      <div className={style.iconCircle}>
-                        <div
-                          className={clsx(
-                            style.icon,
-                            "d-flex justify-content-center align-items-center"
-                          )}
-                        >
-                          {svgicon.call}
-                        </div>
-                      </div>
+                      <HoIcon variant={"bigCrircleIcon"} icon={svgicon.call} />
+
                       <Typography
                         className={clsx(
                           style.line_clap,
@@ -114,16 +112,8 @@ const Footer = () => {
                   {/* Email */}
                   <div className="w-100 w-sm-50">
                     <div className="d-flex align-items-center gap-2 flex-row">
-                      <div className={style.iconCircle}>
-                        <div
-                          className={clsx(
-                            style.icon,
-                            "d-flex justify-content-center align-items-center"
-                          )}
-                        >
-                          {svgicon.mail}
-                        </div>
-                      </div>
+                      <HoIcon variant={"bigCrircleIcon"} icon={svgicon.mail} />
+
                       <Typography
                         className={clsx(
                           style.line_clap,
@@ -148,9 +138,10 @@ const Footer = () => {
           >
             <Typography className="font-primary text-dark-grey font-size-xs fw-normal m-0">
               Powered by Hello
-              <NavLink
-                to="/" className="ps-2 link-underline-secondary" >
-                <span className={`${style.underLine} text-dark-grey `}>Hospitality Technology</span>
+              <NavLink to="/" className="ps-2 link-underline-secondary">
+                <span className={`${style.underLine} text-dark-grey `}>
+                  Hospitality Technology
+                </span>
               </NavLink>
             </Typography>
           </div>

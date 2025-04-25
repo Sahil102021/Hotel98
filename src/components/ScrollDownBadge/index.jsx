@@ -13,16 +13,10 @@ const ScrollDownBadge = () => {
           <div className={`${style.img} position-relative`}>
             {/* <img src={roundedCircle} width="100%" height="100%" alt="" /> */}
             {svgicon.scrollBadge}
-
-            <div
-              className={`${style.img_i} ${style.roundeTextImg} position-absolute`}
-            >
+            <div className={`${style.img_i} ${style.roundeTextImg} position-absolute`} >
               <img src={roundedText} width="100%" height="100%" alt="" />
             </div>
-
-            <div
-              className={`${style.downArrowIcon} position-absoulate text-light`}
-            >
+            <div className={`${style.downArrowIcon} position-absoulate text-light`} >
               {svgicon.downArrow}
             </div>
           </div>

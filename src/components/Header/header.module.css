@@ -61,16 +61,30 @@
     background-color: var(--bg-green) ;
     color: white ;
 }
-
 .modal_backdrop {
     backdrop-filter: blur(3px);
     background-color: var(--bg-black-40);
+    transition: all 0.3s ease-in-out;
 }
 
 .hideScrolling {
-    display: none;
-    transition: all 1s ease-in-out;
+    opacity: 0;
+    transform: translateY(-100%);
+    pointer-events: none;
+    transition: all 0.4s ease;
+  }
+  
+.showScrolling {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.4s ease;
 }
+.topSideScrolling {
+    transform: translateY(-41px);
+    transition: all 0.4s ease;
+}
+  
+  
 
 @media (max-width: 1279px) {
     :root {
@@ -80,6 +94,9 @@
     .divider {
         height: 35px;
     }
+    .topSideScrolling {
+        transform: translateY(-36px);
+    } 
 }
 
 @media (max-width: 991px) {
@@ -96,5 +113,8 @@
     .mainLogo {
         width: 80px;
     }
+    .topSideScrolling {
+        transform: translateY(-31px);
+    } 
 
 }

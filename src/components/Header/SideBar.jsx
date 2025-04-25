@@ -34,7 +34,7 @@ const SideBar = () => {
         onClick={closeDrawer}
         open={open}
         className="bg-black text-white"
-        closeIcon={null} // hide default close icon
+        closeIcon={null} 
         Style={{
           padding: 0,
           display: "flex",

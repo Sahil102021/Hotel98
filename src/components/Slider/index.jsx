@@ -26,7 +26,7 @@ export default function Slider({ slideData, slidesPerView, variant }) {
             ref={prevRef}
             className={clsx(
               style.customPrev,
-              "bg-transparent border border-1 rounded-circle"
+              "bg-transparent border border-1 rounded-circle d-flex justify-content-center align-items-center  "
             )}
           >
             {svgicon.leftArrow}
@@ -35,7 +35,7 @@ export default function Slider({ slideData, slidesPerView, variant }) {
             ref={nextRef}
             className={clsx(
               style.customNext,
-              "bg-transparent border border-1 rounded-circle"
+              "bg-transparent border border-1 rounded-circle d-flex justify-content-center  "
             )}
           >
             {svgicon.rightArrow}
@@ -150,8 +150,8 @@ export default function Slider({ slideData, slidesPerView, variant }) {
             )}
 
             {HeroVerticalScroll && (
-              <div className="z-1">
-                <div className={`${style.heroImg} w-100 z-1`}>
+              <div className="">
+                <div className={`${style.heroImg} w-100`}>
                   <img
                     src={el.img}
                     width="100%"

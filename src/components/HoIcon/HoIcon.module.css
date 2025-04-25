@@ -1,0 +1,77 @@
+:root {
+    --same-icon-size: 24px;
+    --same-circle-size: 70px;
+    --same-icon-small-size: 22px;
+    --same-circle-small-size : 40px;
+  }
+
+  .icon {
+    width: var(--same-icon-size);
+    height: var(--same-icon-size);
+    color: #fff;
+  }
+  
+  .iconCircleBig {
+    min-width: var(--same-circle-size) !important;
+    min-height: var(--same-circle-size) !important;
+    border: 1px solid var(--bg-light);
+    gap:0 ;
+    transition: all 0.3s ease;
+  }
+
+  .iconCircleBig:hover ,  .iconCircleBig:focus   {
+    border-color:var(--bg-light) !important;
+    filter: brightness(1.3);
+    background: var(--bg-dark-green) !important;
+  }
+
+  .iconCircleSmall {
+    min-width: var(--same-circle-small-size) !important;
+    min-height: var(--same-circle-small-size);
+    border: 1px solid var(--bg-light);
+    gap:0 ;
+    transition: all 0.3s ease;
+  }
+  .smallIcon{ 
+    width: var(--same-icon-small-size);
+    height: var(--same-icon-small-size);
+    color: #fff;
+  }
+  .iconCircleSmall:hover ,  .iconCircleSmall:focus   {
+    border-color:var(--bg-light) !important;
+    background: var(--bg-green) !important;
+  }
+
+  @media (max-width: 1599px) {
+    :root {
+      --same-circle-size: 60px;
+    }
+  }
+  
+  @media (max-width: 1199px) {
+    :root {
+      --same-circle-size: 45px;
+      --same-icon-size: 18px;
+      --same-icon-small-size: 16px;
+      --same-circle-small-size : 30px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    :root {
+      --same-circle-size: 40px;
+      --same-icon-size: 16px;
+      --same-icon-small-size: 12px;
+      --same-circle-small-size : 30px;
+    }
+  }
+  
+  @media (max-width: 575px) {
+    :root {
+      --same-circle-size: 30px;
+      --same-icon-size: 14px;
+      --same-icon-small-size: 10px;
+      --same-circle-small-size : 25px;
+    }
+  }
+  

@@ -5,3 +5,6 @@ export * from "./Slider";
 export * from "./HoInput";
 export * from "./AdsCard";
 export * from "./ScrollDownBadge";
+export * from "./Dropdown";
+export * from "./HoAutoComplete";
+export * from "./HoIcon";

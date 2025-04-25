@@ -15,6 +15,7 @@ import {
   testimonial3,
   testimonial4,
 } from "../../assets/imges";
+import { icon } from "../icon";
 import { svgicon } from "../svgicon";
 
 export const manuList = [
@@ -133,5 +134,16 @@ export const heroSectionImg = [
   {
     img: hero9,
   },
+];
 
+export const options = [
+  { value: "Burns Bay Road" },
+  { value: "Downing Street" },
+  { value: "Wall Street" },
+];
+
+export const socialMediaLink = [
+  { icon: svgicon.instagram, link: "https://www.instagram.com/" },
+  { icon: svgicon.facebook, link: "https://www.facebook.com/" },
+  { icon: svgicon.youtube, link: "https://www.youtube.com/" },
 ];
