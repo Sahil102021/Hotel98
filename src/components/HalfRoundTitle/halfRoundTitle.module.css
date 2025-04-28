@@ -85,3 +85,13 @@ h1 {
         max-width: 235px;
     }
 }
+@media (max-width:480px) {
+    .border {
+        width: 230px;
+        height: 300px;
+    }
+
+    .innerBackground {
+        max-width: 215px;
+    }
+}

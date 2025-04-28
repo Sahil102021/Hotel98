@@ -218,6 +218,9 @@
     .font-size-3xl {
         font-size: 16px;
     }
+    .font-size-4xl{
+        font-size: 14px;
+    }
 }
 
 @media (min-width: 576px) {}
@@ -227,17 +230,12 @@
         --swiper-height-vertical: 500px;
         --gap-i: 18px;
     }
-    .font-size-lg {
-        font-size: 14px;
+    .font-size-lg , .font-size-md {
+        font-size: 12px;
     }
     .font-size-xl {
         font-size: 14px;
     }
-
-    .font-size-md {
-        font-size: 12px;
-    }
-
 }
 
 /* DEFAULT RESPONSIVE END */

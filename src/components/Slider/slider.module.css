@@ -17,8 +17,8 @@
 }
 
 .testimonialImg {
-  max-width: 184px;
-  max-height: 241px;
+  width: 184px;
+  height: 241px;
   overflow: hidden;
 }
 
@@ -67,14 +67,6 @@
   color: var(--bg-black);
 }
 
-.line_clap {
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 .textLightSkyBlueHover:hover,
 .textLightSkyBlueHover:focus {
   color: var(--bg-sky-blue) !important;
@@ -90,6 +82,31 @@
   width: 100%;
   height: var(--swiper-height-vertical);
 }
+.swiper_pagination_bullet {
+  width: auto; 
+  height: auto; 
+  display: inline-block; 
+  border-radius:0%; 
+  background:transparent; 
+} 
+
+.verticalLine {
+  width: 2px;
+  height: 0px;
+  background-color: var(--bg-light);
+  opacity: 0;
+  transition: height 0.4s ease, opacity 0.4s ease;
+}
+
+:global(.swiper-pagination-bullet-active) .verticalLine {
+  height: 110px;
+  opacity: 1;
+}
+
+:global(.swiper-pagination-bullet-active:last-child) .verticalLine {
+  height: 0px;
+  opacity: 0; 
+}
 
 @media (max-width: 1599px) {
   :root {
@@ -100,8 +117,8 @@
     height: 340px;
   }
   .testimonialImg {
-    max-width: 120px;
-    max-height: 160px;
+    width: 120px;
+    height: 160px;
   }
   .max_w_849 {
     max-width: 500px;
@@ -109,25 +126,44 @@
   .doubleQuotes {
     width: 20px;
   }
+:global(.swiper-pagination-bullet-active) .verticalLine {
+  height: 90px;
 }
 
-@media (max-width: 1365px) {}
+}
+
+@media (max-width: 1365px) {
+  
+:global(.swiper-pagination-bullet-active) .verticalLine {
+  height: 70px;
+  opacity: 1;
+}
+
+}
 
 @media (max-width: 991px) {
   .testimonialImg {
-    max-width: 100px;
-    max-height: 140px;
+    min-width: 100px;
+    min-height: 140px;
   }
-
   .max_w_849 {
     max-width: 360px;
   }
+:global(.swiper-pagination-bullet-active) .verticalLine {
+  height: 50px;
+  opacity: 1;
+}
+
 }
 
 @media (max-width: 767px) {
   :root {
     --same-slider-icon:18px;
     --same-slider-circal-icon:33px;
+  }
+  .testimonialImg {
+    width: 60px;
+    height: 80px;
   }
   .customPrev {
     top: 10%;
@@ -137,6 +173,12 @@
     top: 10% !important;
     right: 5%;
   }
+  
+:global(.swiper-pagination-bullet-active) .verticalLine {
+  height: 30px;
+  opacity: 1;
+}
+
 }
 
 @media (max-width: 575px) {
@@ -150,7 +192,20 @@
   }
 
   .customNext {
-    top: 10% !important;
+    top: 10% ;
+    right: 10%;
+  }
+  :global(.swiper-pagination-bullet-active) .verticalLine {
+    height: 40px;
+  }
+}
+@media (max-width: 480px) {
+  .customPrev {
+    top: 10%;
+    left: 65%;
+  }
+  .customNext {
+    top: 10% ;
     right: 10%;
   }
 }

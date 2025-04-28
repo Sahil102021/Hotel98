@@ -49,12 +49,21 @@ const Home = () => {
               <div className={`${style.halfround} position-absolute z-99`}>
                 <HalfRoundTitle />
               </div>
-              <div className={`${style.heroLeftSideIcon} position-absolute z-3`}>
-                <div className={` ${style.heroLeftSideIconList} d-flex flex-column justify-content-center align-items-center gap-3 gap-xxl-4`}>
-                  {socialMediaLink.map((el ,i ) => {
+              <div
+                className={`${style.heroLeftSideIcon} position-absolute z-3`}
+              >
+                <div
+                  className={` ${style.heroLeftSideIconList} d-flex flex-column justify-content-center align-items-center gap-3 gap-xxl-4`}
+                >
+                  {socialMediaLink.map((el, i) => {
                     return (
-                      <HoIcon key={i} variant={"smallCrircleIcon"} icon={el.icon} to={el.link} />
-                    )
+                      <HoIcon
+                        key={i}
+                        variant={"smallCrircleIcon"}
+                        icon={el.icon}
+                        to={el.link}
+                      />
+                    );
                   })}
                 </div>
               </div>
@@ -70,11 +79,11 @@ const Home = () => {
             <div className={`${style.form_i} padding_let`}>
               <form
                 action=""
-                className="d-flex flex-column flex-md-row align-items-center h-100 py-2 pe-3 pe-md-0 py-md-0"
-              >
+                className="d-flex flex-column flex-md-row align-items-center h-100 py-2 pe-3 pe-md-0 py-md-0" >
                 <div className={`${style.form_ii} w-100  row `}>
-                  <div className="col-6 col-xl-3 py-2 ">
+                  <div className="col-12 col-sm-6 col-xl-3 py-2 ">
                     <HoInput
+                      id={"Check_in"}
                       type={"date"}
                       name={"date"}
                       variant={"date"}
@@ -82,23 +91,33 @@ const Home = () => {
                       calendarIcon={svgicon.calender}
                     />
                   </div>
-                  <div className="col-6 col-xl-3 py-2 ">
+                  <div className="col-12 col-sm-6  col-xl-3 py-2 ">
                     <HoInput
+                      id={"Check_out"}
                       type={"date"}
                       variant={"date"}
                       name={"date"}
-                      placeholder={"Check-in"}
+                      placeholder={"Check-out"}
                       calendarIcon={svgicon.calender}
                     />
                   </div>
-                  <div className="col-6 col-xl-3 py-2 ">
+                  <div className="col-12 col-sm-6  col-xl-3 py-2 ">
                     <HoAutoComplete
+                      id={"room"}
+                      name={"room"}
                       variant={"primaryAutoComplete"}
                       options={options}
+                      placeholder={"Room"}
                     />
                   </div>
-                  <div className="col-6 col-xl-3 py-2 ">
-                    <Dropdown Variant={"DropdownPrimary"} Children="guest" />
+                  <div className="col-12 col-sm-6  col-xl-3 py-2 ">
+                    <HoAutoComplete
+                      id={"guest"}
+                      name={"guest"}
+                      variant={"primaryAutoComplete"}
+                      options={options}
+                      placeholder={"guest"}
+                    />
                   </div>
                 </div>
                 <HoButton variant="bigPlanButton" Children="book now" />
@@ -113,13 +132,16 @@ const Home = () => {
         <div className="w-100 ">
           <div className="container">
             <div className="w-100 d-flex flex-column flex-md-row align-items-center border border-3 border-start-0 border-end-0">
-              <div className=" p-3 pe-md-4 py-md-5 pe-xl-5 py-xl-5">
-                <div className={clsx(style.bestHotelImg)}>
+              <div
+                className={` pt-3 pb-3 p-sm-3 pe-md-4 py-md-5 pe-xl-5 py-xl-5 ${style.bordeverticalLine}`}
+              >
+                <div className={`${style.bestHotelImg}`}>
                   <img
                     src={bestHotel}
                     width="100%"
                     height="100%"
                     alt="Best Hotel"
+                    className="object-fit-cover"
                   />
                 </div>
               </div>
@@ -127,12 +149,12 @@ const Home = () => {
                 <div
                   className={clsx(
                     style.max_width_i,
-                    "max_width_i w-100 ps-4 ps-3xl-5 d-flex flex-column"
+                    "max_width_i w-100 pb-3 ps-sm-4 ps-3xl-5 d-flex flex-column"
                   )}
                 >
                   <Typography className="Vujahday">About us</Typography>
 
-                  <h2 className=" lh-base m-0">
+                  <h2 className=" line_clap_four_line lh-base m-0">
                     We are the best hotel we have experienced for 5 years. Don’t
                     worry about service
                   </h2>
@@ -179,7 +201,7 @@ const Home = () => {
                 <Typography
                   className={clsx([
                     style.max_w_652,
-                    "font-size-md text-grey text-justify text-sm-end pb-xxl-4",
+                    "font-size-md text-grey text-justify text-sm-end pb-xxl-4 line_clap_four_line ",
                   ])}
                 >
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -207,7 +229,7 @@ const Home = () => {
 
       {/* Our Quality Is Your Comfort  */}
       <section>
-        <div className="w-100 padding_small_i_t bg-black-01">
+        <div className="w-100 padding_small_i_t padding_smaller_b bg-black-01">
           <div className="container py-3xl-5">
             <div className="w-100 d-flex flex-column flex-lg-row gap-4 gap-lg-0 py-3">
               <div className={clsx([style.max_w_435, "w-25"])}>

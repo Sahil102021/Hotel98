@@ -8,7 +8,7 @@ import { NavLink } from "react-router";
 const ScrollDownBadge = () => {
   return (
     <div className="">
-      <NavLink to="/aboutHome">
+      <NavLink to="/">
         <div className="d-flex justify-content-center align-items-center">
           <div className={`${style.img} position-relative`}>
             {/* <img src={roundedCircle} width="100%" height="100%" alt="" /> */}

@@ -53,6 +53,8 @@ const Footer = () => {
                     />
                   )}
                   <div
+                    onClick={allowMapAccess}
+                    style={{ cursor: "pointer" }}
                     className={`${style.iconLocation} position-absolute z-5`}
                   >
                     {svgicon.location2}

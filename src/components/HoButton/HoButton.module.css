@@ -1,10 +1,9 @@
- 
-  :global(.ant-btn) {
-    font-size: 14px ; 
+:global(.ant-btn) {
+    font-size: 14px;
     height: auto;
-   padding: 0px 15px;
-   border-radius: 0px;
- }
+    padding: 0px 15px;
+    border-radius: 0px;
+}
 
 /* General Button Reset */
 button {
@@ -17,20 +16,19 @@ button {
 }
 
 /* Primary Button Style */
-.customButton:global.ant-btn {
+:global(.ant-btn).customButton {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-  
+
     min-width: 149px;
     min-height: 60px;
     max-width: 150px;
     padding: 0 16px;
-  
+
     color: var(--bg-light);
-    background-color: var(--bg-sky-blue);
     border-radius: 0;
-  
+
     background-image: linear-gradient(30deg, var(--bg-sky-blue) 50%, transparent 50%);
     background-size: 500px;
     background-repeat: no-repeat;
@@ -38,55 +36,52 @@ button {
     transition: background-position 300ms ease-in-out, color 300ms ease-in-out;
     text-transform: uppercase;
     font-weight: 600;
-    cursor: pointer;
-    box-shadow: unset;
-  }
-  
-  .customButton:hover  {
-    background-position: 100% !important;
-    background-color: transparent !important;
-    color: var(--bg-green) !important;
-    border-color: var(--bg-green) !important;
-  } 
-  
+    box-shadow: none;
+}
+
+:global(.ant-btn).customButton:not(:disabled):not(.ant-btn-disabled):hover {
+    background-position: 100%;
+    background-color: transparent ;
+    color: var(--bg-green) ;
+    border-color: var(--bg-green);
+}
 
 /* Border-only Style */
-.simpleBorder:global.ant-btn {  
+:global(.ant-btn).simpleBorder {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-  
     background-color: transparent;
     color: var(--bg-light);
     min-width: 120px;
     min-height: 40px;
     padding: 0 12px;
-  
-    border: 1px solid var(--bg-light) !important;
+    border: 1px solid var(--bg-light);
     border-radius: 0;
-    cursor: pointer;
-    transition: all 250ms ease-in-out;
-  }
-  
-  .simpleBorder:hover {
-    background-color: var(--bg-green) !important ;
-    border-color: transparent !important ;
-    color: var(--bg-light) !important;
-  }
+    transition: all 0.25s ease-in-out;
+}
+
+:global(.ant-btn).simpleBorder:not(:disabled):not(.ant-btn-disabled):hover  {
+    background-color: var(--bg-green);
+    border-color: transparent;
+    color: var(--bg-light);
+}
+
 /* Plan Button Style */
 .planButton {
     width: 226px;
     height: auto;
     padding: 14px 20px;
     border-radius: 0;
-    background-color: var(--bg-sky-blue) ;
+    background-color: var(--bg-sky-blue);
     color: var(--bg-light);
     box-shadow: none;
 }
+
 .planButton:hover {
     background-color: var(--bg-green);
-    border:var(--bg-green) ;
-    color: var(--bg-light) ;
+    border-color: var(--bg-green);
+    color: var(--bg-light);
 }
 
 :global(.ant-btn-variant-outlined) {
@@ -94,47 +89,51 @@ button {
     background-color: transparent;
 }
 
-.bigPlanButton {
+:global(.ant-btn).bigPlanButton {
     width: 226px;
-    height: 100% ;
+    height: 100%;
     padding: 14px 20px;
     border-radius: 0;
-    background-color: var(--bg-sky-blue) ;
+    background-color: var(--bg-sky-blue);
     color: var(--bg-light);
     box-shadow: none;
 }
-.bigPlanButton:hover {
-    background-color: var(--bg-green) !important;
-    border:var(--bg-green) !important;
-    color: var(--bg-light) !important ;
+
+.bigPlanButton:not(:disabled):not(.ant-btn-disabled):hover  {
+    background-color: var(--bg-green) ;
+    border-color: var(--bg-green) ;
+    color: var(--bg-light) ;
 }
 
+/* Responsive */
 @media (max-width: 1200px) {
-    .customButton {
+    :global(.ant-btn).customButton {
         min-width: 130px;
         min-height: 50px;
     }
-
-    .simpleBorder {
+    :global(.ant-btn).simpleBorder {
         min-width: 110px;
         min-height: 36px;
     }
-
     .planButton {
         width: 200px;
+    }
+    :global(.ant-btn).bigPlanButton {
+        height: 115px;
     }
 }
 
 @media (max-width: 991px) {
-    .customButton {
+    :global(.ant-btn).customButton {
         min-width: 100px;
         min-height: 40px;
     }
 
-    .simpleBorder {
+    :global(.ant-btn).simpleBorder {
         min-width: 100px;
         min-height: 32px;
     }
+
     .planButton {
         width: 180px;
         padding: 10px 16px;
@@ -142,25 +141,34 @@ button {
 }
 
 @media (max-width: 767px) {
+    :global(.ant-btn).customButton {
+        width: 100%;
+        min-width: unset;
+        max-width: 110px;
+    }
 
-    .customButton,
-    .simpleBorder,
+    :global(.ant-btn).simpleBorder {
+        width: 100%;
+        min-width: unset;
+        max-width: 110px;
+    }
+
     .planButton {
         width: 100%;
         min-width: unset;
         max-width: 110px;
     }
-    .bigPlanButton {
+
+    :global(.ant-btn).bigPlanButton {
         width: 100%;
+        height: 100%;
         min-width: 28px;
-        padding: 5px 0 5px 0;
+        padding: 5px 0;
     }
 }
 
 @media (max-width: 480px) {
-
-    .customButton,
-    .simpleBorder,
+    :global(.ant-btn).customButton,
     .planButton {
         padding: 10px;
     }

@@ -23,7 +23,7 @@ const HoAutoComplete = ({
         onClick={handleClick}
         style={{ width: "100%" }}
         className={clsx({
-          [`${styles.primaryAutoComplete} font-size-md font-primary text-white fw-normal`]:
+          [`${styles.primaryAutoComplete} font-primary text-white fw-normal`]:
             variant === "primaryAutoComplete",
         })}
         options={options}

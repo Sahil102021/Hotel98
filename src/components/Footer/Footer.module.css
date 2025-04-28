@@ -1,3 +1,8 @@
+:root {
+    --icon-location-size: 42px;
+    --map-Circle-size: 152px;
+}
+
 .powerBy {
     height: 48px;
 }
@@ -11,27 +16,9 @@
     height: 164px;
 }
 
-.iconCircle {
-    min-width: 70px;
-    min-height: 70px;
-    border: 1px solid var(--bg-light);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.iconCircle:hover {
-    filter: brightness(0.5);
-}
-
-.icon {
-    width: 24px;
-    height: 24px;
-}
-
 .iconLocation {
-    width: 42px;
-    height: 42px;
+    width: var(--icon-location-size);
+    height: var(--icon-location-size);
     color: var(--bg-sky-blue);
     z-index: 10;
     /* background-color: var(--bg-sky-blue); */
@@ -55,19 +42,13 @@
     overflow: hidden;
 }
 
-.mapLightSkyBlue {
-    width: 152px;
-    height: 152px;
-    background-color: var(--bg-light-sky-blue);
-}
-
 .pulsating_circle {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
-    width: 152px;
-    height: 152px;
+    width: var(--map-Circle-size);
+    height: var(--map-Circle-size);
     z-index: 1;
 }
 
@@ -107,46 +88,45 @@
         transform: translate(-50%, -50%) scale(1);
         opacity: 1;
     }
+
     100% {
         transform: translate(-50%, -50%) scale(1.4);
         opacity: 0;
     }
 }
+
 .mapIframe {
     transition: all 0.3s ease;
 }
+
 .noPointer {
     pointer-events: none;
     filter: brightness(0.3) blur(2.5px);
 }
+
 .mapIframe:not(.noPointer):hover {
     filter: none;
 }
 
 @media (max-width: 1599px) {
-    .map {
-        height: 390px;
+    :root {
+        --icon-location-size: 32px;
+        --map-Circle-size: 132px;
     }
 
-    .iconCircle {
-        min-width: 60px;
-        min-height: 60px;
+    .map {
+        height: 390px;
     }
 }
 
 @media (max-width: 1199px) {
+    :root {
+        --icon-location-size: 28px;
+        --map-Circle-size: 100px;
+    }
+
     .map {
         height: 300px;
-    }
-
-    .iconCircle {
-        min-width: 45px;
-        min-height: 45px;
-    }
-
-    .icon {
-        width: 18px;
-        height: 18px;
     }
 
     .powerBy {
@@ -159,37 +139,30 @@
 }
 
 @media (max-width: 991px) {
+    :root {
+        --icon-location-size: 24px;
+        --map-Circle-size: 90px;
+    }
+
     .map {
         height: 250px;
     }
 }
 
 @media (max-width: 768px) {
-    .iconCircle {
-        min-width: 40px;
-        min-height: 40px;
-    }
-
-    .icon {
-        width: 16px;
-        height: 16px;
+    :root {
+        --icon-location: 24px;
     }
 }
 
 @media (max-width: 575px) {
-    .iconCircle {
-        min-width: 30px;
-        min-height: 30px;
-    }
-
-    .icon {
-        width: 14px;
-        height: 14px;
+    :root {
+        --icon-location-size: 20px;
+        --map-Circle-size: 80px;
     }
 
     .greenFooter {
         height: auto;
-        /* allow content to define height */
         padding: 1rem 0;
     }
 }

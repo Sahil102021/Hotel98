@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 import style from "./slider.module.css";
 import { icon, svgicon } from "../../const";
 
+
 export default function Slider({ slideData, slidesPerView, variant }) {
   const isHomeRoom = variant === "homeRoomPage";
   const isTestimonial = variant === "testimonials";
@@ -17,6 +18,21 @@ export default function Slider({ slideData, slidesPerView, variant }) {
   const swiperDirection = HeroVerticalScroll ? "vertical" : "horizontal";
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+  
+  const pagination = {
+    clickable: true,
+    renderBullet: function (index, className) {
+      return `
+        <div class="${className} ${style.HeroVerticalNumber} ${style.swiper_pagination_bullet} text-light m-0 me-sm-2 me-md-3 me-xl-4 d-flex justify-content-center align-items-center swiper-pagination-bullet">
+          <div class="d-flex flex-column align-items-center p-sm-2">
+            <Typography>0${index + 1}</Typography>
+            <div class="${style.verticalLine} mt-sm-2"></div>
+          </div>
+        </div>
+      `;
+    },
+  };
+  
 
   return (
     <div className="position-relative">
@@ -35,7 +51,7 @@ export default function Slider({ slideData, slidesPerView, variant }) {
             ref={nextRef}
             className={clsx(
               style.customNext,
-              "bg-transparent border border-1 rounded-circle d-flex justify-content-center  "
+              "bg-transparent border border-1 rounded-circle d-flex justify-content-center  align-items-center  "
             )}
           >
             {svgicon.rightArrow}
@@ -45,10 +61,10 @@ export default function Slider({ slideData, slidesPerView, variant }) {
 
       <Swiper
         modules={[Pagination, Navigation]}
+        speed="700"
+        autoplay={true}
         direction={swiperDirection}
-        pagination={{
-          clickable: true,
-        }}
+        pagination={HeroVerticalScroll ? pagination : false}
         loop={true}
         className="mySwiper"
         navigation={
@@ -116,6 +132,7 @@ export default function Slider({ slideData, slidesPerView, variant }) {
                   <img
                     src={el.img}
                     width="100%"
+                    height="100%"
                     className="object-fit-cover"
                     alt="testimonial"
                   />
@@ -129,19 +146,18 @@ export default function Slider({ slideData, slidesPerView, variant }) {
                   <Typography
                     className={clsx(
                       style.max_w_849,
-                      style.line_clap,
-                      "font-primary fw-normal font-size-4xl "
+                      "font-primary fw-normal font-size-4xl line_clap_four_line "
                     )}
                   >
                     {el.detail}
                   </Typography>
                   <div className="d-flex flex-column flex-sm-row gap-sm-3 align-items-sm-center mt-3">
                     <Typography
-                      className={`font-secondary fs-5 fw-bold ${style.textLightSkyBlueHover}`}
+                      className={`font-secondary font-size-4xl fw-bold ${style.textLightSkyBlueHover} line_clap_one_line`}
                     >
                       {el.name}
                     </Typography>
-                    <Typography className="font-primary fs-6 text-muted fw-normal">
+                    <Typography className={`font-primary font-size-lg text-muted fw-normal line_clap_one_line `}>
                       {el.day}
                     </Typography>
                   </div>
