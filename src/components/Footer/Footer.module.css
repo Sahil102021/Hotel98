@@ -1,14 +1,9 @@
-:root {
-    --icon-location-size: 42px;
-    --map-Circle-size: 152px;
-}
-
 .powerBy {
     height: 48px;
 }
 
 .underLine {
-    text-decoration: underline !important;
+    text-decoration: underline ;
     text-underline-offset: 4px;
 }
 

@@ -1,45 +1,37 @@
-:root {
-    --same-icon-size: 24px;
-    --same-circle-size: 70px;
-    --same-icon-small-size: 22px;
-    --same-circle-small-size : 40px;
-  }
-
   .icon {
     width: var(--same-icon-size);
     height: var(--same-icon-size);
-    color: #fff;
   }
   
-  .iconCircleBig {
-    min-width: var(--same-circle-size) !important;
-    min-height: var(--same-circle-size) !important;
+  :global(.ant-btn.ant-btn-circle.ant-btn).iconCircleBig {
+    min-width: var(--same-circle-size) ;
+    min-height: var(--same-circle-size) ;
     border: 1px solid var(--bg-light);
     gap:0 ;
     transition: all 0.3s ease;
   }
 
-  .iconCircleBig:hover ,  .iconCircleBig:focus   {
-    border-color:var(--bg-light) !important;
+  :global(.ant-btn.ant-btn-circle.ant-btn).iconCircleBig:hover ,  :global(.ant-btn.ant-btn-circle.ant-btn).iconCircleBig:focus   {
+    border-color:var(--bg-light) ;
     filter: brightness(1.3);
-    background: var(--bg-dark-green) !important;
+    background: var(--bg-dark-green) ;
   }
 
-  .iconCircleSmall {
-    min-width: var(--same-circle-small-size) !important;
+  :global(.ant-btn.ant-btn-circle.ant-btn).iconCircleSmall {
+    min-width: var(--same-circle-small-size) ;
     min-height: var(--same-circle-small-size);
     border: 1px solid var(--bg-light);
     gap:0 ;
     transition: all 0.3s ease;
   }
-  .smallIcon{ 
+.smallIcon{ 
     width: var(--same-icon-small-size);
     height: var(--same-icon-small-size);
     color: #fff;
   }
-  .iconCircleSmall:hover ,  .iconCircleSmall:focus   {
-    border-color:var(--bg-light) !important;
-    background: var(--bg-green) !important;
+  :global(.ant-btn.ant-btn-circle.ant-btn).iconCircleSmall:hover ,    :global(.ant-btn.ant-btn-circle.ant-btn).iconCircleSmall:focus   {
+    border-color:var(--bg-light) ;
+    background: var(--bg-green) ;
   }
 
   @media (max-width: 1599px) {

@@ -1,14 +1,9 @@
 /* CONTAINERS START */
-@media (min-width: 576px) {
-}
+@media (min-width: 576px) {}
 
 @media (min-width: 768px) {
     :root {
         --container-size: 740px;
-    }
-
-    .padding_let {
-        padding-left: calc((100% - 740px) / 2);
     }
 }
 
@@ -17,19 +12,11 @@
         --container-size: 960px;
         --gap-i: 42px;
     }
-
-    .padding_let {
-        padding-left: calc((100% - 960px) / 2);
-    }
 }
 
 @media (min-width: 1200px) {
     :root {
         --container-size: 1120px;
-    }
-
-    .padding_let {
-        padding-left: calc((100% - 1120px) / 2);
     }
 }
 
@@ -38,19 +25,11 @@
         --container-size: 1180px;
         --gap-i: 52px;
     }
-
-    .padding_let {
-        padding-left: calc((100% - 1180px) / 2);
-    }
 }
 
 @media (min-width: 1350px) {
     :root {
         --container-size: 1240px;
-    }
-
-    .padding_let {
-        padding-left: calc((100% - 1240px) / 2);
     }
 }
 
@@ -59,19 +38,11 @@
         --container-size: 1340px;
         --gap-i: 62px
     }
-
-    .padding_let {
-        padding-left: calc((100% - 1340px) / 2);
-    }
 }
 
 @media (min-width: 1600px) {
     :root {
         --container-size: 1470px;
-    }
-
-    .padding_let {
-        padding-left: calc((100% - 1470px) / 2);
     }
 }
 
@@ -79,10 +50,6 @@
     :root {
         --container-size: 1600px;
         --gap-i: 72px
-    }
-
-    .padding_let {
-        padding-left: calc((100% - 1600px) / 2);
     }
 }
 
@@ -116,7 +83,7 @@
     }
 
     .p-5 {
-        padding: 24px !important;
+        padding: 24px;
     }
 
     h2 {
@@ -140,60 +107,80 @@
 
 @media (max-width: 1279px) {
     :root {
-        --section-small-spacing_ii:42px;
+        --section-small-spacing_ii: 42px;
         --section-small-spacing_i: 60px;
         --section-smaller-spacing: 3rem;
         --swiper-height-vertical: 650px;
         --line-hight: 62px;
     }
+
     h1 {
         font-size: 42px;
     }
+
     .font-size-3xl {
         font-size: 20px;
     }
 }
 
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+    .font-size-lg {
+        font-size: 18px;
+    }
+}
 
 @media (max-width: 1199px) {
     .font-size-xl {
         font-size: 16px;
     }
+
     h1 {
         font-size: 42px;
     }
 }
 
 @media (max-width: 991px) {
+
     :root {
         --header-hight: 40px;
         --section-small-spacing_i: 40px;
-        --section-small-spacing_ii:32px;
+        --section-small-spacing_ii: 32px;
         --section-smaller-spacing: 2rem;
         --swiper-height-vertical: 600px;
         --line-hight: 42px;
     }
-    .w-75,
+
+    .w-75-custom,
     .w-50,
-    .w-25 {
-        width: 100% !important;
+    .w-25-custom {
+        width: 100%;
     }
+
     .font-size-sm {
         font-size: 12px;
     }
-    .font-size-4xl {
+
+    .font-size-lg {
         font-size: 16px;
     }
+
+    .font-size-4xl,
+    .font-size-2xl {
+        font-size: 16px;
+    }
+
     .font-size-3xl {
         font-size: 18px;
     }
+
     .Vujahday {
         font-size: 24px;
     }
+
     h1 {
         font-size: 32px;
     }
+
     h2 {
         font-size: 20px;
     }
@@ -202,23 +189,31 @@
 @media (min-width: 768px) and (max-width: 991px) {}
 
 @media (max-width: 767px) {
+    .font-size-lg {
+        font-size: 14px;
+    }
+
     .font-size-xl {
         font-size: 16px;
     }
+
     :root {
         --section-small-spacing_i: 30px;
-        --section-small-spacing_ii:22px;
+        --section-small-spacing_ii: 22px;
         --section-smaller-spacing: 3rem;
         --swiper-height-vertical: 600px;
         --line-hight: 32px;
     }
+
     h1 {
         font-size: 24px;
     }
+
     .font-size-3xl {
         font-size: 16px;
     }
-    .font-size-4xl{
+
+    .font-size-4xl {
         font-size: 14px;
     }
 }
@@ -230,12 +225,17 @@
         --swiper-height-vertical: 500px;
         --gap-i: 18px;
     }
-    .font-size-lg , .font-size-md {
+
+    .font-size-lg,
+    .font-size-md {
         font-size: 12px;
     }
+
     .font-size-xl {
         font-size: 14px;
     }
-}
 
-/* DEFAULT RESPONSIVE END */
+    .font-size-lg {
+        font-size: 12px;
+    }
+}

@@ -25,10 +25,10 @@
 }
 .dateInput:hover,
 .dateInput:focus {
-  background-color: transparent !important;
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
+  background-color: transparent ;
+  border: none ;
+  outline: none ;
+  box-shadow: none ;
 }
 .dateInput::-webkit-calendar-picker-indicator {
   opacity: 0;

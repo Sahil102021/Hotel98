@@ -42,7 +42,7 @@ export default function Slider({ slideData, slidesPerView, variant }) {
             ref={prevRef}
             className={clsx(
               style.customPrev,
-              "bg-transparent border border-1 rounded-circle d-flex justify-content-center align-items-center  "
+              " border border-1 rounded-circle d-flex justify-content-center align-items-center  "
             )}
           >
             {svgicon.leftArrow}
@@ -51,7 +51,7 @@ export default function Slider({ slideData, slidesPerView, variant }) {
             ref={nextRef}
             className={clsx(
               style.customNext,
-              "bg-transparent border border-1 rounded-circle d-flex justify-content-center  align-items-center  "
+              " border border-1 rounded-circle d-flex justify-content-center  align-items-center  "
             )}
           >
             {svgicon.rightArrow}
@@ -116,10 +116,10 @@ export default function Slider({ slideData, slidesPerView, variant }) {
                 <div
                   className={clsx(
                     style.border_color,
-                    "border border-1 border-end-0 border-start-0 py-3 mt-4"
+                    "border border-1 border-end-0 border-start-0 py-2 py-md-3 mt-4"
                   )}
                 >
-                  <Typography className="font-primary fs-4 text-uppercase text-white text-center ">
+                  <Typography className="font-primary font-size-2xl text-uppercase text-white text-center">
                     {el.title}
                   </Typography>
                 </div>

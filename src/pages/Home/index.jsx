@@ -53,7 +53,7 @@ const Home = () => {
                 className={`${style.heroLeftSideIcon} position-absolute z-3`}
               >
                 <div
-                  className={` ${style.heroLeftSideIconList} d-flex flex-column justify-content-center align-items-center gap-3 gap-xxl-4`}
+                  className={` ${style.heroLeftSideIconList} flex-column justify-content-center align-items-center gap-3 gap-xxl-4`}
                 >
                   {socialMediaLink.map((el, i) => {
                     return (
@@ -159,7 +159,7 @@ const Home = () => {
                     worry about service
                   </h2>
 
-                  <div className="d-flex flex-row gap-4 gap-xl-5 pt-3 pt-xl-4">
+                  <div className="d-flex flex-wrap gap-4 gap-xl-5 pt-3 pt-xl-4">
                     <HoButton
                       variant="normal"
                       Children="Read More"
@@ -192,18 +192,16 @@ const Home = () => {
                   className={clsx([
                     style.max_w_609,
                     "text-white max-w-435 m-0",
-                  ])}
-                >
+                  ])} >
                   comfortable rooms just for you
                 </h2>
               </div>
-              <div className=" d-flex justify-content-end align-items-end py-3 py-md-5">
+              <div className=" d-flex justify-content-start justify-content-md-end align-items-end py-3 py-md-5">
                 <Typography
                   className={clsx([
                     style.max_w_652,
-                    "font-size-md text-grey text-justify text-sm-end pb-xxl-4 line_clap_four_line ",
-                  ])}
-                >
+                    "font-size-md text-grey text-justify text-md-end pb-xxl-4 line_clap_four_line ",
+                  ])} >
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -216,7 +214,7 @@ const Home = () => {
               slideData={roomHomePageData}
               slidesPerView={4}
             />
-            <div className="w-100 d-flex justify-content-center  pt-2 pt-md-3 pt-lg-4  pt-xl-5 ">
+            <div className="w-100 d-flex justify-content-center  pt-3 pt-md-4  pt-xl-5 ">
               <HoButton
                 variant={"normal"}
                 Children={"view More"}
@@ -232,7 +230,7 @@ const Home = () => {
         <div className="w-100 padding_small_i_t padding_smaller_b bg-black-01">
           <div className="container py-3xl-5">
             <div className="w-100 d-flex flex-column flex-lg-row gap-4 gap-lg-0 py-3">
-              <div className={clsx([style.max_w_435, "w-25"])}>
+              <div className={clsx([style.max_w_435, "w-25-custom"])}>
                 <Typography className="Vujahday">Why Stay with Us</Typography>
                 <h2
                   className={clsx([
@@ -243,7 +241,7 @@ const Home = () => {
                   Our Quality Is Your Comfort
                 </h2>
               </div>
-              <div className="w-75">
+              <div className="w-75-custom">
                 <div className="row justify-content-end">
                   <div className="col-12 col-lg-11">
                     <div className="row g-4">

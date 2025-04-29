@@ -1,8 +1,3 @@
-:root {
-  --icon: 50px;
-  --iconPostion: 68px;
-}
-
 .border {
   border: var(--border-primary) solid var(--bg-grey);
   transition: 0.5s all ease-in-out;
@@ -17,8 +12,8 @@
 .cardSize {
   max-width: 510px;
   width: 100%;
-  height: 190px;
-  padding: 46px 0 0 30px;
+  height: 100%;
+  padding: 25px 10px 10px 10px;
 }
 
 .max_w_450 {
@@ -56,20 +51,10 @@
   .iconPostion {
     top: -20%;
   }
-
-  .cardSize {
-    width: 100%;
-    height: 180px;
-    padding: 36px 15px 0 30px;
-  }
 }
 
 @media (max-width: 1439px) {
-  .cardSize {
-    width: 100%;
-    height: 160px;
-    padding: 26px 0 0 15px;
-  }
+
 }
 
 @media (max-width: 1199px) {
@@ -78,18 +63,13 @@
     --icon: 40px;
   }
 
-  .cardSize {
-    width: 100%;
-    height: 160px;
-    padding: 26px 15px 0 15px;
-  }
 }
 
 @media (max-width: 991px) {}
 
 @media (max-width: 767px) {
   .cardSize {
-    height: 140px;
+    max-width : 100%
   }
 }
 
@@ -99,8 +79,4 @@
     --icon: 30px;
   }
 
-  .cardSize {
-    height: 100px;
-    padding: 20px 12px 0 12px;
-  }
 }

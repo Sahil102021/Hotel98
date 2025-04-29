@@ -94,7 +94,7 @@ const Footer = () => {
                 </div>
 
                 {/* Contact Details */}
-                <div className="w-100 w-md-50 d-flex flex-column flex-sm-row gap-3">
+                <div className="w-100 w-md-50 d-flex flex-column flex-sm-row gap-2 gap-md-3">
                   {/* Phone */}
                   <div className="w-100 w-sm-50">
                     <div className="d-flex align-items-center gap-2 flex-row">

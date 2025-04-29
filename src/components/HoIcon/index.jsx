@@ -17,20 +17,17 @@ export const HoIcon = ({ icon, id, name, type, variant, to }) => {
             variant === "bigCrircleIcon",
           [`${style.iconCircleSmall}   d-flex justify-content-center align-items-center  text-light `]:
             variant === "smallCrircleIcon",
-        })}
-      >
-        <div
-          className={clsx([
+        })} >
+        <div className={clsx([
             {
-              [`${style.icon} d-flex justify-content-center align-items-center  text-light `]:
+              [`${style.icon} d-flex justify-content-center align-items-center text-light `]:
                 variant === "bigCrircleIcon",
               [`${style.smallIcon} d-flex justify-content-center align-items-center  text-light `]:
                 variant === "smallCrircleIcon",
             },
-          ])}
-        >
+          ])} >
           {icon}
-        </div>{" "}
+        </div>
       </Button>
     </NavLink>
   );

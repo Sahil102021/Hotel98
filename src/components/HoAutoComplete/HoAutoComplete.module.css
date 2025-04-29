@@ -1,10 +1,7 @@
-:root {
-  --same-size: 24px;
-}
 
 .downArrowIcon {
-  width: var(--same-size);
-  height: var(--same-size);
+  width: var(--same-auto-complete-size);
+  height: var(--same-auto-complete-size);
   display: flex;
   align-items: center;
   justify-content: center;

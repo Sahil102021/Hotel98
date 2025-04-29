@@ -4,7 +4,6 @@
 }
 
 .widthHightSame {
-    --widthHightSame: 16px;
     width: var(--widthHightSame);
     height: var(--widthHightSame);
     color: var(--bg-light);
@@ -88,7 +87,7 @@
 
 @media (max-width: 1279px) {
     :root {
-        --header-hight: 50px;
+        --header-hight: 60px;
     }
 
     .divider {
@@ -102,7 +101,6 @@
 @media (max-width: 991px) {
 
     :root {
-        --header-hight: 40px;
         --widthHightSame: 12px;
     }
 

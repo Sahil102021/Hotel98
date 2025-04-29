@@ -9,7 +9,7 @@
     --bg-green: #87C65A;
     --bg-dark-green: #024F25;
     --bg-dark-teal: #004958;
-    --bg-teal-transparent:#003f4c5b;
+    --bg-teal-transparent: #003f4c5b;
     --bg-light: #FFF;
     --bg-light-20: #ffffff2c;
     --bg-light-40: #FFFFFF66;
@@ -18,31 +18,56 @@
     --bg-grey: #A1A1A1;
     --bg-light-grey: #B3B3B3;
     --bg-dark-grey: #747474;
-    --bg-black : #000;
-    --bg-black-01:#021A1F;
+    --bg-black: #000;
+    --bg-black-01: #021A1F;
     --bg-black-light: #131313;
     --bg-black-40: #13131366;
-    --bg-dark-grey : #77959A;
-    --bg-light-sky-blue :#1FC0E129;
+    --bg-dark-grey: #77959A;
+    --bg-light-sky-blue: #1FC0E129;
     --caribbean-blue-color: 31, 192, 225;
-    --bg-border-grey : #dee2e6;
+    --bg-border-grey: #dee2e6;
 
 
-    /* height */
-    --header-hight : 68px;
-    --line-hight : 104px;
-    --swiper-height-vertical : 881px;
+    /* line-height */
+    --line-hight: 104px;
 
     /* spacing */
     --section-small-spacing: 7rem;
     --section-small-spacing_i: 140px;
-    --section-small-spacing_ii:110px;
+    --section-small-spacing_ii: 110px;
     --section-smaller-spacing: 5rem;
 
     /* container */
     --container-size: 1600px;
 
 
-    --border-primary : 1px ;
-    --gap-i : 72px;
+    --border-primary: 1px;
+    --gap-i: 72px;
+
+    /* footer */
+    --icon-location-size: 42px;
+    --map-Circle-size: 152px;
+
+    /* header */
+    --header-hight: 68px;
+    --widthHightSame: 16px;
+
+    /* adsCard */
+    --icon: 50px;
+    --iconPostion: 68px;
+
+
+    /* hoAutoComplate */
+    --same-auto-complete-size: 24px;
+
+    /* hoIcon */
+    --same-icon-size: 24px;
+    --same-circle-size: 70px;
+    --same-icon-small-size: 22px;
+    --same-circle-small-size: 40px;
+
+    /* slider */
+    --swiper-height-vertical: 881px;
+    --same-slider-icon: 22px;
+    --same-slider-circal-icon: 44px;
 }

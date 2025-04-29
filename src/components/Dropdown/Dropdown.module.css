@@ -4,20 +4,11 @@
     border-bottom: 1px solid var(--bg-light-20);
 }
 .dropdownPrimary:hover {
-    color: #fff !important;
-    background-color: transparent !important;
+    color: #fff ;
+    background-color: transparent ;
 }
 .droupDownArrowSize{
     --same-size : 24px;
     width: var(--same-size);
     height: var(--same-size);
 }
-/* :global(.ant-btn-disabled:hover) {
-    color: transparent !important;
-    background-color: transparent !important;
-    border-color:transparent !important;
-} */
-/* :global(.css-dev-only-do-not-override-1261szd).ant-btn-variant-text:not(:disabled):not(.ant-btn-disabled):hover {
-    color: #fff !important;
-    background-color: transparent !important;
-} */
